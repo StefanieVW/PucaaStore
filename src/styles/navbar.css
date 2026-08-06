@@ -11,7 +11,7 @@
   transform: translateX(-50%);
 
   width: min(1120px, calc(100% - 48px));
-  height: 70px;
+  height: 74px;
 
   z-index: 1000;
 
@@ -20,30 +20,129 @@
 
   padding: 0 12px 0 18px;
 
-  background: rgba(255, 255, 255, 0.88);
+  /* ==================================================
+     GLASS SURFACE
+  ================================================== */
 
-  border: 1px solid var(--border);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(247, 251, 255, 0.93)
+    );
 
-  border-radius: 22px;
+  border: 1px solid rgba(23, 108, 255, 0.12);
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  border-radius: 24px;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* ==================================================
+     3D DEPTH
+  ================================================== */
 
   box-shadow:
-    0 18px 55px rgba(8, 38, 92, 0.08),
-    0 4px 12px rgba(8, 38, 92, 0.04);
+    0 1px 2px rgba(7, 26, 61, 0.04),
+    0 8px 18px rgba(7, 26, 61, 0.05),
+    0 20px 42px rgba(7, 26, 61, 0.07),
+    0 30px 65px rgba(23, 108, 255, 0.07),
+
+    /* inner highlight */
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+
+    /* subtle lower edge */
+    inset 0 -1px 0 rgba(23, 108, 255, 0.04);
+
+  overflow: visible;
 }
 
+
+/* ==================================================
+   NAVBAR TOP SPECULAR HIGHLIGHT
+================================================== */
+
+.desktop-nav::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 8%;
+  right: 8%;
+
+  height: 1px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 1),
+      rgba(91, 174, 255, 0.35),
+      rgba(255, 255, 255, 1),
+      transparent
+    );
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+/* ==================================================
+   NEON ACCENT — BLUE × PURPLE
+================================================== */
+
+.desktop-nav::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+  bottom: -1px;
+
+  height: 1.5px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(91, 190, 255, 0.08) 12%,
+      rgba(91, 190, 255, 0.35) 30%,
+      rgba(91, 190, 255, 0.55) 50%,
+      rgba(91, 190, 255, 0.35) 70%,
+      rgba(91, 190, 255, 0.08) 88%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 5px rgba(70, 180, 255, 0.22),
+    0 0 12px rgba(70, 170, 255, 0.12);
+
+  opacity: 0.75;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
 
 /* =========================
    BRAND
 ========================= */
 
 .brand-logo {
-  width: 42px;
-  height: 42px;
+  width: 54px;
+  height: 54px;
+
   object-fit: contain;
+
   display: block;
+
+  flex-shrink: 0;
 }
 
 .nav-brand {
@@ -115,6 +214,8 @@
 }
 
 .desktop-nav-links a {
+  position: relative;
+
   padding: 10px 14px;
 
   border-radius: 11px;
@@ -127,13 +228,22 @@
   transition:
     color 0.25s ease,
     background 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .desktop-nav-links a:hover {
   color: var(--blue);
 
-  background: var(--ice);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(23, 108, 255, 0.08),
+      rgba(70, 89, 255, 0.06)
+    );
+
+  box-shadow:
+    0 4px 14px rgba(23, 108, 255, 0.08);
 
   transform: translateY(-1px);
 }
@@ -141,7 +251,16 @@
 .desktop-nav-links a.active {
   color: var(--blue);
 
-  background: var(--ice);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(23, 108, 255, 0.10),
+      rgba(70, 92, 255, 0.07)
+    );
+
+  box-shadow:
+    inset 0 0 0 1px rgba(23, 108, 255, 0.06),
+    0 4px 14px rgba(23, 108, 255, 0.06);
 }
 
 
@@ -155,7 +274,7 @@
   display: none;
 }
 
-@media (max-width: 608px) {
+@media (max-width: 658px) {
   /* ==================================================
      MOBILE NAVBAR
   ================================================== */
@@ -163,38 +282,152 @@
     display:none;
   }
 
-  .mobile-nav {
-    position: fixed;
-
-    top: 14px;
-    left: 14px;
-    right: 14px;
-
-    height: 62px;
-
-    z-index: 1000;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 10px 0 15px;
-
-    background:
-      rgba(255, 255, 255, 0.90);
-
-    border:
-      1px solid var(--border);
-
-    border-radius: 18px;
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    box-shadow:
-      0 12px 35px rgba(8, 38, 92, 0.08);
+  .mobile-nav > * {
+    position: relative;
+    z-index: 4;
   }
+
+/* ==================================================
+   MOBILE NAVBAR — PREMIUM GLASS
+================================================== */
+
+.mobile-nav {
+  position: fixed;
+
+  top: 14px;
+  left: 14px;
+  right: 14px;
+
+  height: 62px;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 10px 0 15px;
+
+  /* ==================================================
+     GLASS SURFACE
+  ================================================== */
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.76),
+      rgba(247, 251, 255, 0.58)
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.88);
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(24px) saturate(145%);
+  -webkit-backdrop-filter: blur(24px) saturate(145%);
+
+  /* ==================================================
+     3D GLASS DEPTH
+  ================================================== */
+
+  box-shadow:
+    0 6px 16px rgba(7, 26, 61, 0.05),
+    0 16px 35px rgba(7, 26, 61, 0.07),
+    0 22px 50px rgba(23, 108, 255, 0.08),
+
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(23, 108, 255, 0.08),
+
+    inset 0 0 22px rgba(80, 160, 255, 0.035);
+
+  overflow: visible;
+}
+
+
+/* ==================================================
+   MOBILE GLASS REFLECTION
+================================================== */
+
+.mobile-nav::before {
+  content: "";
+
+  position: absolute;
+
+  top: 1px;
+  left: 8%;
+  right: 8%;
+
+  height: 30px;
+
+  border-radius: 20px 20px 50% 50%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.60),
+      rgba(255, 255, 255, 0.08),
+      transparent
+    );
+
+  opacity: 0.65;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* ==================================================
+   MOBILE NEON ACCENT — BLUE × PURPLE
+================================================== */
+
+/* ==================================================
+   MOBILE NEON ACCENT — SOFT BLUE ONLY
+================================================== */
+
+.mobile-nav::after {
+  content: "";
+
+  position: absolute;
+
+  left: 8%;
+  right: 8%;
+  bottom: -1px;
+
+  height: 1.5px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+
+      rgba(91, 190, 255, 0.06) 10%,
+
+      rgba(91, 190, 255, 0.28) 28%,
+
+      rgba(91, 190, 255, 0.45) 50%,
+
+      rgba(91, 190, 255, 0.28) 72%,
+
+      rgba(91, 190, 255, 0.06) 90%,
+
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 5px rgba(70, 180, 255, 0.18),
+    0 0 12px rgba(70, 170, 255, 0.10);
+
+  opacity: 0.75;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
 
   /* ==================================================
     MOBILE NAV ACTIONS
@@ -289,13 +522,37 @@
 
     gap: 5px;
 
-    border: 0;
+    border: 1px solid rgba(23, 108, 255, 0.10);
 
     border-radius: 12px;
 
-    background: var(--ice);
+    background:
+      linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.70),
+        rgba(232, 242, 255, 0.55)
+      );
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+      0 4px 12px rgba(23, 108, 255, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
 
     cursor: pointer;
+
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .hamburger:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+      0 5px 16px rgba(23, 108, 255, 0.14),
+      0 0 12px rgba(0, 183, 255, 0.10);
   }
 
   .hamburger span {

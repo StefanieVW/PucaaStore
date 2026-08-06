@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '../composables/useLanguage'
-import pucaaLogo from '../assets/pucaa-logo-transparent.png'
+import pucaaLogo from '../assets/pucaa-logo.png'
+import cipanLogo from '../assets/cipan-logo.png'
 
 const { language, t, setLanguage } = useLanguage()
 
@@ -32,13 +33,12 @@ onMounted(() => {
         )
 
       if (visibleSections.length > 0) {
-        activeSection.value =
-          visibleSections[0].target.id
+        activeSection.value = visibleSections[0].target.id
       }
     },
     {
-      threshold: [0.2, 0.4, 0.6],
-      rootMargin: '-15% 0px -55% 0px',
+      threshold: [0, 0.15, 0.3, 0.5],
+      rootMargin: '-10% 0px -45% 0px',
     }
   )
 
@@ -57,18 +57,17 @@ onUnmounted(() => {
   <header class="desktop-nav">
 
     <!-- BRAND -->
+    <a href="#home" class="nav-brand collaboration-brand">
 
-    <a href="#home" class="nav-brand">
-      <img
-        :src="pucaaLogo"
-        alt="PUCAA Store"
-        class="brand-logo"
-      />
+      <div class="collab-logo pucaa-logo-wrap">
+        <span class="electric-ring"></span>
 
-      <span class="brand-name">
-        PUCAA
-        <small>STORE</small>
-      </span>
+        <img
+          :src="pucaaLogo"
+          alt="PUCAA"
+          class="brand-logo pucaa-logo"
+        />
+      </div>
     </a>
 
 

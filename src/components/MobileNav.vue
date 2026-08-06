@@ -2,7 +2,7 @@
 import { ref, watch } from 'vue'
 import gsap from 'gsap'
 import { useLanguage } from '../composables/useLanguage'
-import pucaaLogo from '../assets/pucaa-logo-transparent.png'
+import pucaaLogo from '../assets/pucaa-logo.png'
 
 const open = ref(false)
 
@@ -55,19 +55,18 @@ watch(open, (isOpen) => {
 
   <header class="mobile-nav">
 
-    <a href="#home" class="mobile-brand">
+    <!-- BRAND -->
+    <a href="#home" class="nav-brand collaboration-brand">
 
-      <img
-        :src="pucaaLogo"
-        alt="PUCAA Store"
-        class="brand-logo"
-      />
+      <div class="collab-logo pucaa-logo-wrap">
+        <span class="electric-ring"></span>
 
-      <span>
-        PUCAA
-        <small>STORE</small>
-      </span>
-
+        <img
+          :src="pucaaLogo"
+          alt="PUCAA"
+          class="brand-logo pucaa-logo"
+        />
+      </div>
     </a>
 
 

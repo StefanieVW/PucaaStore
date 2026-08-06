@@ -12,13 +12,13 @@ const contacts = [
   // WhatsApp
   {
     platform: 'WhatsApp',
-    admin: 'Admin 1',
+    admin: 'Admin 1 -Cindy',
     icon: whatsappIcon,
     url: 'https://wa.me/6281264722301',
   },
   {
     platform: 'WhatsApp',
-    admin: 'Admin 2',
+    admin: 'Admin 2 -Vilencia',
     icon: whatsappIcon,
     url: 'https://wa.me/6281944361109',
   },
@@ -26,13 +26,13 @@ const contacts = [
   // Discord
   {
     platform: 'Discord',
-    admin: 'Admin 1',
+    admin: 'Admin 1 -Cindy',
     icon: discordIcon,
     url: 'https://discord.com/users/545596758693117953',
   },
   {
     platform: 'Discord',
-    admin: 'Admin 2',
+    admin: 'Admin 2 -Vilencia',
     icon: discordIcon,
     url: 'https://discord.com/users/399250119024705546',
   },
@@ -40,13 +40,13 @@ const contacts = [
   // Facebook
   {
     platform: 'Facebook',
-    admin: 'Admin 1',
+    admin: 'Admin 1 -Cindy',
     icon: facebookIcon,
     url: 'https://facebook.com/cindyphannnn',
   },
   {
     platform: 'Facebook',
-    admin: 'Admin 2',
+    admin: 'Admin 2 -Vilencia',
     icon: facebookIcon,
     url: 'https://facebook.com/vilenciakurni',
   },

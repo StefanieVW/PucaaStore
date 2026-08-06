@@ -45,28 +45,49 @@ const translations = {
     },
 
     about: {
-        eyebrow: 'ABOUT PUCAA STORE',
-        title: 'About PUCAA Store',
-        subtitle: 'Trusted Digital Marketplace Since 2016',
+      eyebrow: 'ABOUT US',
+      title: 'Built on Trust.',
+      subtitle: '10 Years of Experience in the Growtopia Community',
 
-        description:
-            'PUCAA Store is a digital marketplace providing safe, fast, and reliable DL and BGL buying and selling services.',
+      description:
+        'Our journey began in 2016 as BGL resellers within the Growtopia community. Over the years, we have built our reputation through more than 15,000 transactions and long-standing relationships with players and hosters from around the world.',
 
-        commitment:
-            'We are committed to providing a comfortable transaction experience through professional service, transparent processes, and responsive customer support.',
+      commitment:
+        'Today, we continue to serve customers worldwide — from the United States and Europe to the Middle East, Asia, and beyond. Transactions are available 24/7 through Facebook, Discord, and WhatsApp, with no holidays and no closing hours.',
 
-        founder: 'Founder & Owner',
+      founder: 'Owner & Operator',
 
-        trustedSince: 'Trusted Since 2016',
-        transactions: '5000+ Transactions',
-        secureMarketplace: 'Secure Marketplace',
-        fastResponse: 'Fast Response',
+      transactions: 'Successful Transactions',
+      secureMarketplace: 'Worldwide Customer Reach',
+      fastResponse: 'Service Availability',
 
-        badges: {
-            secure: 'Secure Marketplace',
-            fast: 'Fast Process',
-            response: 'Responsive Support',
+      badges: {
+        worldwide: 'Worldwide Service',
+        trusted: 'Trusted Reseller',
+        support: 'Multi-Platform Support',
+      },
+
+      profiles: {
+        vilencia: {
+          store: 'Pucaa Store',
+          role: 'Owner & Operator',
+          description:
+            'Managing Pucaa Store with a focus on trusted service, clear communication, and a seamless DL and BGL transaction experience.',
         },
+
+        cindy: {
+          store: 'Cipan Store',
+          role: 'Owner & Operator',
+          description:
+            'Managing Cipan Store and serving the Growtopia community with a long-standing focus on reliable transactions and customer service.',
+        },
+      },
+
+      reputation: {
+        title: 'Trusted Across the Community',
+        description:
+          'Our services have been built through years of direct transactions across Facebook, Discord, and WhatsApp. We are also trusted resellers on DiscordGTID and GTMart, serving customers from different parts of the world.',
+      },
     },
 
     services: {
@@ -99,9 +120,9 @@ const translations = {
     },
 
     trust: {
-      eyebrow: 'WHY PUCAA',
+      eyebrow: 'WHY CHOOSE US',
       titleBefore: 'Why players choose',
-      titleHighlight: 'PUCAA Store.',
+      titleHighlight: 'Us.',
 
       international: {
         title: 'International',
@@ -180,7 +201,7 @@ const translations = {
       eyebrow: 'STAY CONNECTED',
       title: 'Join Our WhatsApp Channel',
       description:
-        'Get marketplace updates, promotions, events, and the latest news from PUCAA Store.',
+        'Stay updated with our latest marketplace news, promotions, events, and community updates.',
     },
 
     faq: {
@@ -188,33 +209,33 @@ const translations = {
       titleBefore: 'Questions,',
       titleHighlight: 'answered.',
       description:
-        'Everything you need to know before making a transaction with PUCAA Store.',
+        'Everything you need to know before making a transaction with us.',
 
       items: [
         {
-          question: 'Is PUCAA Store safe for transactions?',
+          question: 'Are transactions with us safe?',
           answer:
-            'PUCAA Store handles DL and BGL transactions directly through our admins. Transaction details are confirmed before the process continues.',
+            'We handle DL and BGL transactions directly through our admins. Transaction details are confirmed before the process continues.',
         },
         {
-          question: 'Does PUCAA Store serve international customers?',
+          question: 'Do you serve international customers?',
           answer:
-            'Yes. PUCAA Store welcomes customers from different countries. Payment methods can be arranged based on your location and agreement with the admin.',
+            'Yes. We welcome customers from different countries. Payment methods can be arranged based on your location and agreement with the admin.',
         },
         {
-          question: 'When can I contact the admin?',
+          question: 'When can I contact an admin?',
           answer:
             'Our admins are available 24 hours a day, every day, including weekends and public holidays.',
         },
         {
           question: 'How do I make a transaction?',
           answer:
-            'Choose the service you need, contact one of our admins through WhatsApp, and provide your transaction details. The admin will guide you through the process.',
+            'Choose the service you need, contact one of our admins through WhatsApp, and provide your transaction details. Our admin will guide you through the process.',
         },
         {
           question: 'Is the transaction completed through the website?',
           answer:
-            'No. The website provides information and connects you with our official admins. Transaction confirmation and processing are handled directly through the available contact channels.',
+            'No. The website serves as an information hub and connects you with our official admins. Transaction confirmation and processing are handled directly through the available contact channels.',
         },
       ],
     },
@@ -224,8 +245,25 @@ const translations = {
       titleBefore: "Let's make your",
       titleHighlight: 'transaction easier.',
       description:
-        'Have questions or want to make a transaction? Contact PUCAA STORE.',
+        'Have questions or want to make a transaction? Our admins are ready to help.',
       button: 'Contact Admin',
+    },
+
+    footer: {
+      description: 'A trusted digital marketplace since 2016.',
+
+      navigation: 'Navigation',
+
+      connect: 'Connect',
+
+      community: 'Community',
+
+      channelNote:
+        'Stay connected with us for the latest updates, announcements, and community news.',
+
+      copyright: 'All Rights Reserved.',
+
+      marketplace: 'Digital Marketplace',
     },
   },
 
@@ -265,28 +303,49 @@ const translations = {
     },
 
     about: {
-        eyebrow: 'TENTANG PUCAA STORE',
-        title: 'Tentang PUCAA Store',
-        subtitle: 'Marketplace Digital Terpercaya Sejak 2016',
+      eyebrow: 'TENTANG KAMI',
+      title: 'Dibangun dengan Kepercayaan.',
+      subtitle: '10 Tahun Berpengalaman di Komunitas Growtopia',
 
-        description:
-            'PUCAA Store merupakan marketplace digital yang menyediakan layanan jual beli DL dan BGL secara aman, cepat, dan terpercaya.',
+      description:
+        'Perjalanan kami dimulai pada tahun 2016 sebagai reseller BGL di komunitas Growtopia. Selama bertahun-tahun, kami membangun reputasi melalui lebih dari 15.000 transaksi serta hubungan jangka panjang dengan player dan hoster dari berbagai negara.',
 
-        commitment:
-            'Kami berkomitmen memberikan pengalaman transaksi yang nyaman melalui pelayanan profesional, proses yang transparan, dan customer support yang responsif.',
+      commitment:
+        'Hingga saat ini, kami terus melayani pelanggan dari seluruh dunia — mulai dari Amerika Serikat dan Eropa hingga Timur Tengah, Asia, dan berbagai wilayah lainnya. Transaksi tersedia 24/7 melalui Facebook, Discord, dan WhatsApp, tanpa hari libur maupun jam tutup.',
 
-        founder: 'Founder & Owner',
+      founder: 'Owner & Operator',
 
-        trustedSince: 'Terpercaya Sejak 2016',
-        transactions: '5000+ Transaksi',
-        secureMarketplace: 'Marketplace Aman',
-        fastResponse: 'Respon Cepat',
+      transactions: 'Transaksi Berhasil',
+      secureMarketplace: 'Jangkauan Pelanggan Global',
+      fastResponse: 'Ketersediaan Layanan',
 
-        badges: {
-            secure: 'Marketplace Aman',
-            fast: 'Proses Cepat',
-            response: 'Support Responsif',
+      badges: {
+        worldwide: 'Layanan Worldwide',
+        trusted: 'Trusted Reseller',
+        support: 'Multi-Platform Support',
+      },
+
+      profiles: {
+        vilencia: {
+          store: 'Pucaa Store',
+          role: 'Owner & Operator',
+          description:
+            'Mengelola Pucaa Store dengan fokus pada pelayanan terpercaya, komunikasi yang jelas, serta pengalaman transaksi DL dan BGL yang nyaman dan lancar.',
         },
+
+        cindy: {
+          store: 'Cipan Store',
+          role: 'Owner & Operator',
+          description:
+            'Mengelola Cipan Store dan melayani komunitas Growtopia dengan pengalaman panjang dalam transaksi terpercaya dan pelayanan pelanggan.',
+        },
+      },
+
+      reputation: {
+        title: 'Dipercaya di Komunitas',
+        description:
+          'Layanan kami dibangun melalui pengalaman transaksi selama bertahun-tahun melalui Facebook, Discord, dan WhatsApp. Kami juga merupakan trusted reseller di DiscordGTID dan GTMart, serta melayani pelanggan dari berbagai belahan dunia.',
+      },
     },
 
     services: {
@@ -318,10 +377,10 @@ const translations = {
       },
     },
 
-    trust: {
-      eyebrow: 'KENAPA PUCAA',
-      titleBefore: 'Kenapa player memilih',
-      titleHighlight: 'PUCAA Store.',
+      trust: {
+        eyebrow: 'KENAPA MEMILIH KAMI',
+        titleBefore: 'Kenapa player memilih',
+        titleHighlight: 'Kami.',
 
       international: {
         title: 'International',
@@ -400,7 +459,7 @@ const translations = {
       eyebrow: 'TETAP TERHUBUNG',
       title: 'Gabung Saluran WhatsApp Kami',
       description:
-        'Dapatkan update marketplace, promo, event, serta informasi terbaru PUCAA Store.',
+        'Dapatkan update marketplace, promo, event, serta informasi terbaru dari kami dan komunitas.',
     },
 
     faq: {
@@ -408,33 +467,33 @@ const translations = {
       titleBefore: 'Pertanyaan,',
       titleHighlight: 'terjawab.',
       description:
-        'Informasi penting yang perlu kamu ketahui sebelum melakukan transaksi di PUCAA Store.',
+        'Informasi penting yang perlu kamu ketahui sebelum melakukan transaksi bersama kami.',
 
       items: [
         {
-          question: 'Apakah PUCAA Store aman untuk transaksi?',
+          question: 'Apakah transaksi bersama kami aman?',
           answer:
-            'PUCAA Store menangani transaksi DL dan BGL secara langsung melalui admin. Detail transaksi akan dikonfirmasi terlebih dahulu sebelum proses dilanjutkan.',
+            'Kami menangani transaksi DL dan BGL secara langsung melalui admin. Detail transaksi akan dikonfirmasi terlebih dahulu sebelum proses dilanjutkan.',
         },
         {
-          question: 'Apakah PUCAA Store melayani pelanggan internasional?',
+          question: 'Apakah kami melayani pelanggan internasional?',
           answer:
-            'Ya. PUCAA Store terbuka untuk pelanggan dari berbagai negara. Metode pembayaran dapat disesuaikan berdasarkan lokasi dan kesepakatan dengan admin.',
+            'Ya. Kami terbuka untuk pelanggan dari berbagai negara. Metode pembayaran dapat disesuaikan berdasarkan lokasi dan kesepakatan dengan admin.',
         },
         {
           question: 'Kapan saya bisa menghubungi admin?',
           answer:
-            'Admin PUCAA Store tersedia 24 jam setiap hari, termasuk akhir pekan dan hari libur.',
+            'Admin kami tersedia 24 jam setiap hari, termasuk akhir pekan dan hari libur.',
         },
         {
           question: 'Bagaimana cara melakukan transaksi?',
           answer:
-            'Pilih layanan yang kamu butuhkan, hubungi salah satu admin melalui WhatsApp, lalu sampaikan detail transaksi. Admin akan membantu prosesnya hingga selesai.',
+            'Pilih layanan yang kamu butuhkan, hubungi salah satu admin melalui WhatsApp, lalu sampaikan detail transaksi. Admin kami akan membantu mengarahkan prosesnya hingga selesai.',
         },
         {
           question: 'Apakah transaksi dilakukan langsung melalui website?',
           answer:
-            'Tidak. Website digunakan sebagai pusat informasi dan penghubung dengan admin resmi. Konfirmasi serta proses transaksi dilakukan melalui kontak yang tersedia.',
+            'Tidak. Website berfungsi sebagai pusat informasi dan penghubung dengan admin resmi kami. Konfirmasi serta proses transaksi dilakukan melalui kontak yang tersedia.',
         },
       ],
     },
@@ -444,8 +503,25 @@ const translations = {
       titleBefore: 'Mari buat',
       titleHighlight: 'transaksimu lebih mudah.',
       description:
-        'Punya pertanyaan atau ingin melakukan transaksi? Hubungi PUCAA STORE.',
+        'Punya pertanyaan atau ingin melakukan transaksi? Admin kami siap membantu.',
       button: 'Hubungi Admin',
+    },
+
+    footer: {
+      description: 'Marketplace digital terpercaya sejak 2016.',
+
+      navigation: 'Navigasi',
+
+      connect: 'Terhubung',
+
+      community: 'Komunitas',
+
+      channelNote:
+        'Tetap terhubung bersama kami untuk mendapatkan update, pengumuman, dan informasi terbaru dari komunitas.',
+
+      copyright: 'Hak Cipta Dilindungi.',
+
+      marketplace: 'Marketplace Digital',
     },
   },
 }

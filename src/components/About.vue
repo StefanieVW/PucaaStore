@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { ShieldCheck, Zap, BadgeCheck, MessageCircle } from 'lucide-vue-next'
+import {
+  ShieldCheck,
+  BadgeCheck,
+  Globe2,
+  MessageCircle,
+  ArrowUpRight
+} from 'lucide-vue-next'
+
 import { useLanguage } from '../composables/useLanguage'
 
 const { t } = useLanguage()
@@ -35,16 +42,18 @@ const { t } = useLanguage()
 
 
       <!-- =========================
-           CONTENT
+           MAIN CONTENT
       ========================== -->
 
       <div class="about-content">
 
-        <!-- LEFT -->
+        <!-- =========================
+             STORY
+        ========================== -->
 
         <div class="about-description">
 
-          <p>
+          <p class="about-lead">
             {{ t.about.description }}
           </p>
 
@@ -52,36 +61,39 @@ const { t } = useLanguage()
             {{ t.about.commitment }}
           </p>
 
-
-          <!-- SMALL TRUST MARKERS -->
-
           <div class="about-badges">
-
             <div class="about-badge">
-              <ShieldCheck :size="16" />
-              <span>{{ t.about.badges.secure }}</span>
+              <Globe2 :size="15" />
+              <span>{{ t.about.badges.worldwide }}</span>
             </div>
 
             <div class="about-badge">
-              <Zap :size="16" />
-              <span>{{ t.about.badges.fast }}</span>
+              <ShieldCheck :size="15" />
+              <span>{{ t.about.badges.trusted }}</span>
             </div>
 
             <div class="about-badge">
-              <MessageCircle :size="16" />
-              <span>{{ t.about.badges.response }}</span>
+              <MessageCircle :size="15" />
+              <span>{{ t.about.badges.support }}</span>
             </div>
-
           </div>
 
         </div>
 
 
-        <!-- RIGHT -->
+
+        <!-- =========================
+             MANAGEMENT
+        ========================== -->
 
         <div class="about-profiles">
 
-          <!-- PROFILE 1 -->
+          <span class="management-label">
+            {{ t.about.founder }}
+          </span>
+
+
+          <!-- VILEN -->
 
           <article class="profile-card">
 
@@ -92,13 +104,19 @@ const { t } = useLanguage()
               </div>
 
               <div class="profile-info">
+
                 <h3>
                   Vilencia Kurniawan
                 </h3>
 
-                <span>
-                  {{ t.about.founder }}
+                <span class="profile-store">
+                  {{ t.about.profiles.vilencia.store }}
                 </span>
+
+                <small>
+                  {{ t.about.profiles.vilencia.role }}
+                </small>
+
               </div>
 
               <BadgeCheck
@@ -108,22 +126,14 @@ const { t } = useLanguage()
 
             </div>
 
-            <div class="profile-badges">
-
-              <span>
-                ✓ {{ t.about.trustedSince }}
-              </span>
-
-              <span>
-                ✓ {{ t.about.secureMarketplace }}
-              </span>
-
-            </div>
+            <p class="profile-description">
+              {{ t.about.profiles.vilencia.description }}
+            </p>
 
           </article>
 
 
-          <!-- PROFILE 2 -->
+          <!-- CINDY -->
 
           <article class="profile-card">
 
@@ -138,14 +148,14 @@ const { t } = useLanguage()
                 <h3>
                   Cindy Clarita
                 </h3>
+                
+                <span class="profile-store">
+                  {{ t.about.profiles.cindy.store }}
+                </span>
 
                 <small>
-                  (Cindy Phan)
+                  {{ t.about.profiles.cindy.role }}
                 </small>
-
-                <span>
-                  {{ t.about.founder }}
-                </span>
 
               </div>
 
@@ -156,21 +166,42 @@ const { t } = useLanguage()
 
             </div>
 
-            <div class="profile-badges">
-
-              <span>
-                ✓ {{ t.about.transactions }}
-              </span>
-
-              <span>
-                ✓ {{ t.about.fastResponse }}
-              </span>
-
-            </div>
+            <p class="profile-description">
+              {{ t.about.profiles.cindy.description }}
+            </p>
 
           </article>
 
         </div>
+
+      </div>
+
+      <!-- =========================
+           REPUTATION
+      ========================== -->
+
+      <div class="about-reputation">
+
+        <div class="reputation-icon">
+          <ShieldCheck :size="21" />
+        </div>
+
+        <div class="reputation-content">
+
+          <h3>
+            {{ t.about.reputation.title }}
+          </h3>
+
+          <p>
+            {{ t.about.reputation.description }}
+          </p>
+
+        </div>
+
+        <ArrowUpRight
+          class="reputation-arrow"
+          :size="18"
+        />
 
       </div>
 

@@ -5,8 +5,11 @@ import {
   Facebook,
   Send
 } from 'lucide-vue-next'
-import pucaaLogo from '../assets/pucaa-logo-transparent.png'
 
+import { useLanguage } from '../composables/useLanguage'
+import pucaaLogo from '../assets/pucaa-logo.png'
+
+const { t } = useLanguage()
 </script>
 
 <template>
@@ -17,22 +20,22 @@ import pucaaLogo from '../assets/pucaa-logo-transparent.png'
       <!-- BRAND -->
       <div class="footer-brand">
 
-        <a href="#home" class="footer-logo">
-          <img
-            :src="pucaaLogo"
-            alt="PUCAA Store"
-            class="brand-logo"
-          />
+        <a href="#home" class="nav-brand collaboration-brand">
 
-          <span class="footer-logo-text">
-            PUCAA
-            <small>STORE</small>
-          </span>
+          <div class="collab-logo pucaa-logo-wrap">
+            <span class="electric-ring"></span>
+
+            <img
+              :src="pucaaLogo"
+              alt="PUCAA"
+              class="brand-logo pucaa-logo"
+            />
+          </div>
+
         </a>
 
         <p>
-          Marketplace Digital terpercaya
-          sejak 2016.
+          {{ t.footer.description }}
         </p>
 
       </div>
@@ -42,14 +45,28 @@ import pucaaLogo from '../assets/pucaa-logo-transparent.png'
       <div class="footer-column">
 
         <span class="footer-label">
-          Navigation
+          {{ t.footer.navigation }}
         </span>
 
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#faq">FAQ</a>
+        <a href="#home">
+          {{ t.nav.home }}
+        </a>
+
+        <a href="#services">
+          {{ t.nav.services }}
+        </a>
+
+        <a href="#about">
+          {{ t.nav.about }}
+        </a>
+
+        <a href="#contact">
+          {{ t.nav.contact }}
+        </a>
+
+        <a href="#faq">
+          FAQ
+        </a>
 
       </div>
 
@@ -58,7 +75,7 @@ import pucaaLogo from '../assets/pucaa-logo-transparent.png'
       <div class="footer-column">
 
         <span class="footer-label">
-          Connect
+          {{ t.footer.connect }}
         </span>
 
         <a
@@ -81,6 +98,8 @@ import pucaaLogo from '../assets/pucaa-logo-transparent.png'
 
         <a
           href="https://facebook.com/vilenciakurni"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Facebook :size="15" />
           Facebook
@@ -98,11 +117,11 @@ import pucaaLogo from '../assets/pucaa-logo-transparent.png'
       </div>
 
 
-      <!-- CHANNEL -->
+      <!-- COMMUNITY -->
       <div class="footer-column">
 
         <span class="footer-label">
-          Community
+          {{ t.footer.community }}
         </span>
 
         <a
@@ -115,8 +134,7 @@ import pucaaLogo from '../assets/pucaa-logo-transparent.png'
         </a>
 
         <p class="footer-note">
-          Stay connected with PUCAA Store
-          for updates and announcements.
+          {{ t.footer.channelNote }}
         </p>
 
       </div>
@@ -128,12 +146,12 @@ import pucaaLogo from '../assets/pucaa-logo-transparent.png'
     <div class="footer-bottom">
 
       <span>
-        © 2016–2026 PUCAA Store.
-        All Rights Reserved.
+        © 2016–2026 Us.
+        {{ t.footer.copyright }}
       </span>
 
       <span>
-        Digital Marketplace
+        {{ t.footer.marketplace }}
       </span>
 
     </div>

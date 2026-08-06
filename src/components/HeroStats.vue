@@ -23,7 +23,7 @@ const { t } = useLanguage()
         </div>
 
         <div class="hero-stat-content">
-          <strong>5000+</strong>
+          <strong>15K+</strong>
 
           <span class="hero-stat-title">
             {{ t.stats.transactions }}
