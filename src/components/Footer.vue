@@ -5,6 +5,8 @@ import {
   Facebook,
   Send
 } from 'lucide-vue-next'
+import pucaaLogo from '../assets/pucaa-logo-transparent.png'
+
 </script>
 
 <template>
@@ -16,7 +18,11 @@ import {
       <div class="footer-brand">
 
         <a href="#home" class="footer-logo">
-          <span class="footer-logo-mark">P</span>
+          <img
+            :src="pucaaLogo"
+            alt="PUCAA Store"
+            class="brand-logo"
+          />
 
           <span class="footer-logo-text">
             PUCAA
