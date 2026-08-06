@@ -2,7 +2,6 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '../composables/useLanguage'
 import pucaaLogo from '../assets/pucaa-logo.png'
-import cipanLogo from '../assets/cipan-logo.png'
 
 const { language, t, setLanguage } = useLanguage()
 
