@@ -1,0 +1,297 @@
+/* ==================================================
+   HERO STATS
+================================================== */
+
+.hero-stats-section {
+  position: relative;
+  padding: 0 10%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(248, 251, 255, 0.50),
+      rgba(255, 255, 255, 0.50)
+    );
+
+  z-index: 5;
+}
+
+
+.hero-stats-grid {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.hero-stat-card {
+  position: relative;
+
+  min-height: 100px;
+
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background:
+    rgba(255, 255, 255, 0.58);
+
+  border:
+    1px solid rgba(23, 108, 255, 0.42);
+
+  box-shadow:
+    0 18px 30px rgba(8, 38, 92, 0.27);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* subtle blue glow */
+
+.hero-stat-card::before {
+  content: '';
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: -65px;
+  top: -65px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(66, 185, 255, 0.20),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.hero-stat-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(23, 23, 24, 0.22);
+
+  box-shadow:
+    0 25px 65px rgba(23, 108, 255, 0.14);
+}
+
+.hero-stat-card:hover::before {
+  transform: scale(1.35);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.hero-stat-icon {
+  flex-shrink: 0;
+
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  color: var(--blue);
+
+  background:
+    linear-gradient(
+      145deg,
+      #eef7ff,
+      #e4f2ff
+    );
+
+  border:
+    1px solid rgba(23, 108, 255, 0.40);
+
+  box-shadow:
+    0 8px 22px rgba(23, 108, 255, 0.28);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.hero-stat-card:hover .hero-stat-icon {
+  transform:
+    translateY(-3px)
+    scale(1.05);
+
+  background:
+    linear-gradient(
+      145deg,
+      #e4f2ff,
+      #d9eeff
+    );
+
+  box-shadow:
+    0 12px 28px rgba(23, 108, 255, 0.14);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-stat-content {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.hero-stat-content strong {
+  color: var(--text);
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+
+.hero-stat-title {
+  margin-top: 8px;
+
+  color: var(--blue);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+}
+
+
+.hero-stat-content p {
+  max-width: 250px;
+
+  margin:
+    12px 0 0;
+
+  color: var(--text-soft);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+  .hero-stats-section {
+    padding: 0 10%;
+  }
+
+  
+  .hero-stats-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap:25px;
+  }
+
+  .hero-stat-card {
+    min-height: 0;
+    gap: 8px;
+    padding:10% 5%;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  .hero-stat-content {
+    text-align: center;
+  }
+}
+
+@media (max-width: 608px) {
+  .hero-stats-section {
+    padding:
+      0
+      15px
+      50px;
+  }
+
+  .hero-stats-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 5px;
+  }
+
+  .hero-stat-card {
+    min-height: 0;
+    gap: 8px;
+    padding:15% 10%;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  .hero-stat-content {
+    text-align: center;
+  }
+
+  .hero-stat-icon {
+    width: 42px;
+    height: 42px;
+
+  }
+
+  .hero-stat-title {
+    margin-top: 3px;
+    font-weight: 500;
+    font-size: 9px;
+  }
+
+  .hero-stat-content strong {
+    font-size: 15px;
+  }
+}

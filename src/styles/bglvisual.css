@@ -1,0 +1,281 @@
+/* ==================================================
+   BGL 3D VISUAL SCENE
+================================================== */
+
+.bgl-visual-layer {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  perspective: 1400px;
+}
+
+
+/* ==================================================
+   SCROLL WRAPPER
+================================================== */
+
+.bgl-scroll-wrapper {
+  position: absolute;
+
+  width: min(560px, 42vw);
+
+  right: 7vw;
+  top: 24vh;
+
+  transform-style: preserve-3d;
+
+  will-change:
+    transform;
+}
+
+
+/* ==================================================
+   MAIN FLOAT
+================================================== */
+
+.bgl-main-float {
+  position: relative;
+
+  width: 100%;
+
+  transform-style: preserve-3d;
+
+  will-change:
+    transform;
+}
+
+
+/* ==================================================
+   MAIN BGL
+================================================== */
+
+.bgl-main {
+  display: block;
+
+  width: 70%;
+  height: auto;
+
+  image-rendering: pixelated;
+
+  opacity: 0.5;
+
+  transform:
+    translateZ(50px)
+    rotateX(5deg)
+    rotateY(-10deg);
+
+  filter:
+    drop-shadow(
+      0 35px 35px
+      rgba(7, 63, 150, 0.12)
+    );
+
+  transform-style: preserve-3d;
+}
+
+
+/* ==================================================
+   GLOW
+================================================== */
+
+.bgl-glow {
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: 4vw;
+  top: 17vh;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(66, 185, 255, 0.28),
+      rgba(23, 108, 255, 0.13) 35%,
+      transparent 70%
+    );
+
+  filter: blur(35px);
+
+  opacity: 0.6;
+
+  transform:
+    scale(1);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ==================================================
+   FLOATING BGL OBJECTS
+================================================== */
+
+.bgl-floating {
+  position: absolute;
+
+  width: 95px;
+
+  transform-style: preserve-3d;
+
+  will-change:
+    transform;
+
+  opacity: 0.7;
+}
+
+.bgl-floating img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  image-rendering: pixelated;
+
+  filter:
+    drop-shadow(
+      0 20px 20px
+      rgba(7, 63, 150, 0.18)
+    );
+}
+
+
+/* TOP LEFT */
+
+.bgl-floating-1 {
+  left: -95px;
+  top: 35px;
+
+  transform:
+    rotate(-12deg)
+    translateZ(100px);
+}
+
+
+/* RIGHT */
+
+.bgl-floating-2 {
+  right: -75px;
+  top: 145px;
+
+  width: 72px;
+
+  transform:
+    rotate(12deg)
+    translateZ(70px);
+}
+
+
+/* BOTTOM */
+
+.bgl-floating-3 {
+  left: 70px;
+  bottom: -95px;
+
+  width: 58px;
+
+  transform:
+    rotate(-8deg)
+    translateZ(120px);
+}
+
+
+/* BIG SCREEN */
+@media (max-width: 1350px) {
+  .bgl-scroll-wrapper {
+    width: 40vw;
+
+    left: 65vw;
+    top: 20vh;
+  }
+  .bgl-floating-1 {
+    left: -125px;
+    top: 20px;
+
+    width: 90px;
+  }
+}
+
+
+/* TABLET */
+@media (max-width: 1008px) {
+  .bgl-scroll-wrapper {
+    width: 30vw;
+
+    left: 70vw;
+    top: 20vh;
+  }
+
+  .bgl-floating-1 {
+    left: -115px;
+    top: 20px;
+
+    width: 75px;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 608px) {
+  .bgl-scroll-wrapper {
+    width: 50vw;
+
+    left: 60vw;
+    top: 20vh;
+  }
+
+  .bgl-main {
+    opacity: 0.5;
+
+    transform:
+      translateZ(20px)
+      rotateX(4deg)
+      rotateY(-6deg);
+  }
+
+  .bgl-floating {
+    opacity: 0.30;
+  }
+
+  .bgl-floating-1 {
+    left: -85px;
+    top: 20px;
+
+    width: 55px;
+  }
+
+  .bgl-floating-2 {
+    right: -35px;
+    top: 110px;
+
+    width: 45px;
+  }
+
+  .bgl-floating-3 {
+    left: 35px;
+    bottom: -55px;
+
+    width: 38px;
+  }
+
+  .bgl-glow {
+    width: 320px;
+    height: 320px;
+
+    right: -20vw;
+    top: 15vh;
+
+    opacity: 0.2;
+  }
+
+}

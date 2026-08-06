@@ -1,0 +1,242 @@
+/* ==================================================
+   TRUST / WHY PUCAA
+================================================== */
+
+.trust {
+  position: relative;
+  padding: 10% 10% 5%;
+
+}
+
+.trust-panel {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+  max-width: 1180px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  border:
+    1px solid rgba(23, 108, 255, 0.12);
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 60px rgba(8, 38, 92, 0.06);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* ==================================================
+   FEATURE
+================================================== */
+
+.trust-feature {
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 22px;
+
+  min-height: 210px;
+
+  padding: 34px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Vertical divider */
+
+.trust-feature:nth-child(odd) {
+  border-right:
+    1px solid rgba(23, 108, 255, 0.10);
+}
+
+
+/* Horizontal divider */
+
+.trust-feature:nth-child(-n + 2) {
+  border-bottom:
+    1px solid rgba(23, 108, 255, 0.10);
+}
+
+
+/* Hover */
+
+.trust-feature:hover {
+  background:
+    rgba(238, 247, 255, 0.55);
+}
+
+
+/* ==================================================
+   ICON
+================================================== */
+
+.trust-icon {
+  flex-shrink: 0;
+
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  color: var(--blue);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--ice),
+      var(--ice-2)
+    );
+
+  border:
+    1px solid rgba(23, 108, 255, 0.10);
+
+  box-shadow:
+    0 10px 25px rgba(23, 108, 255, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.trust-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.trust-feature:hover .trust-icon {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--cyan),
+      var(--blue)
+    );
+
+  transform:
+    translateY(-3px)
+    rotate(-4deg);
+
+  box-shadow:
+    0 12px 30px rgba(23, 108, 255, 0.20);
+}
+
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.trust-feature-content {
+  flex: 1;
+}
+
+.trust-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--blue);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  opacity: 0.7;
+}
+
+.trust-feature h3 {
+  margin: 0;
+
+  font-size: 21px;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.035em;
+}
+
+.trust-feature p {
+  max-width: 390px;
+
+  margin:
+    10px 0 0;
+
+  color: var(--text-soft);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .trust-panel {
+    grid-template-columns: 1fr;
+
+    border-radius: 22px;
+  }
+
+  .trust-feature {
+    min-height: auto;
+
+    padding: 25px;
+  }
+
+  .trust-feature:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .trust-feature:nth-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .trust-feature:not(:last-child) {
+    border-bottom:
+      1px solid rgba(23, 108, 255, 0.10);
+  }
+
+  .trust-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .trust-feature h3 {
+    font-size: 19px;
+  }
+
+  .trust-feature p {
+    font-size: 12px;
+  }
+
+}

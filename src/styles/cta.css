@@ -1,0 +1,72 @@
+.cta {
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(66, 185, 255, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(237, 247, 255, 0.5)
+    );
+
+  padding: 5% 10% 5%;
+
+}
+
+/* ==================================================
+   CTA
+================================================== */
+
+.cta {
+  align-items: center;
+
+  text-align: center;
+}
+
+.cta-content {
+  position: relative;
+
+  z-index: 10;
+
+  max-width: 720px;
+}
+
+.cta h2 {
+  margin: 0;
+
+  font-size:
+    clamp(44px, 6vw, 76px);
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.cta p {
+  max-width: 550px;
+
+  margin:
+    25px auto 35px;
+
+  color: var(--text-soft);
+
+  line-height: 1.8;
+}
+
+@media (max-width: 608px) {
+  .cta {
+    min-height: 80vh;
+
+    padding:
+      100px 22px;
+
+    align-items: center;
+  }
+
+  .cta h2 {
+    font-size:
+      clamp(42px, 12vw, 58px);
+  }
+}

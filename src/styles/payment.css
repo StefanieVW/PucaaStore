@@ -1,0 +1,278 @@
+/* ==================================================
+   PAYMENT METHODS
+================================================== */
+
+.payment-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    60px 0
+    62px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b4dcc 0%,
+      #176cff 50%,
+      #2196f3 100%
+    );
+
+  color: white;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.payment-heading {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    100% - 100px,
+    1100px
+  );
+
+  margin: 0 auto 42px;
+
+  text-align: center;
+}
+
+.payment-heading .eyebrow {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.payment-heading h2 {
+  margin: 10px 0 12px;
+
+  color: white;
+
+  font-size: clamp(
+    30px,
+    4vw,
+    48px
+  );
+
+  line-height: 1.05;
+
+  letter-spacing: -0.04em;
+}
+
+.payment-heading p {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ==================================================
+   MARQUEE
+================================================== */
+
+.payment-marquee {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  padding:
+    15px 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+
+  background:
+    rgba(255, 255, 255, 0.06);
+}
+
+
+/*
+  Fade edges
+*/
+
+.payment-marquee::before,
+.payment-marquee::after {
+  content: '';
+
+  position: absolute;
+
+  z-index: 3;
+
+  top: 0;
+
+  width: 120px;
+
+  height: 100%;
+
+  pointer-events: none;
+}
+
+.payment-marquee::before {
+  left: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0f63e7,
+      transparent
+    );
+}
+
+.payment-marquee::after {
+  right: 0;
+
+  background:
+    linear-gradient(
+      270deg,
+      #2090f5,
+      transparent
+    );
+}
+
+
+/* ==================================================
+   TRACK
+================================================== */
+
+.payment-track {
+  display: flex;
+
+  width: max-content;
+
+  align-items: center;
+
+  will-change: transform;
+}
+
+
+/* ==================================================
+   PAYMENT ITEM
+================================================== */
+
+.payment-item {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 145px;
+
+  padding:
+    8px 10px;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.16);
+}
+
+.payment-item img {
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.payment-icon-small {
+  width: 42px !important;
+  height: 42px !important;
+}
+
+.payment-item span {
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* ==================================================
+   HOVER
+================================================== */
+
+.payment-item {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.payment-item:hover {
+  opacity: 1;
+
+  transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 608px) {
+
+  .payment-section {
+    padding:
+      55px 0
+      58px;
+  }
+
+  .payment-heading {
+    width: calc(100% - 40px);
+
+    margin-bottom: 30px;
+  }
+
+  .payment-heading h2 {
+    font-size: 32px;
+  }
+
+  .payment-heading p {
+    font-size: 13px;
+  }
+
+  .payment-marquee::before,
+  .payment-marquee::after {
+    width: 60px;
+  }
+
+  .payment-item {
+    min-width: 125px;
+
+    padding:
+      7px 20px;
+  }
+
+  .payment-item img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .payment-item span {
+    font-size: 12px;
+  }
+}

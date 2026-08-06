@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@import "./navbar.css";
+@import "./hero.css";
+@import "./hero-stats.css";
+@import "./services.css";
+@import "./trust.css";
+@import "./howitworks.css";
+@import "./cta.css";
+@import "./bglvisual.css";
+@import "./payment.css";
+@import "./channel.css";
+@import "./contact.css";
+@import "./faq.css";
+@import "./about.css";
+@import "./languages.css";
+@import "./footer.css";
+
+
+
+:root {
+  --white: #ffffff;
+  --off-white: #f8fbff;
+  --ice: #eef7ff;
+  --ice-2: #e4f2ff;
+
+  --blue: #176cff;
+  --blue-dark: #0b4dcc;
+  --blue-deep: #08265c;
+  --cyan: #42b9ff;
+
+  --text: #08224f;
+  --text-soft: #5d7191;
+
+  --border: rgba(23, 108, 255, 0.12);
+
+  --shadow:
+    0 20px 60px rgba(22, 92, 180, 0.12);
+
+  --shadow-blue:
+    0 20px 70px rgba(23, 108, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.site {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* ==================================================
+   MAIN
+================================================== */
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.experience {
+  position: relative;
+}
+
+/* ==================================================
+   SECTIONS
+================================================== */
+
+.section {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  z-index: 1;
+}
+
+.hero-content,
+.section-heading,
+.section-heading-services,
+.services-grid,
+.trust-grid,
+.timeline,
+.cta-content {
+  position: relative;
+  z-index: 10;
+}
+
+
+/* ==================================================
+   SECTION HEADING
+================================================== */
+
+.section-heading {
+  position: relative;
+
+  z-index: 10;
+
+  max-width: 650px;
+
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size:
+    clamp(38px, 5vw, 68px);
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.section-heading p {
+  margin-top: 22px;
+
+  max-width: 500px;
+
+  color: var(--text-soft);
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about-section {
+  margin: 15% 10% 0%;
+  padding: 2%;
+  background:
+  rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(23, 108, 255, 0.12);
+
+  border-radius: 32px;
+
+  box-shadow:
+    0 20px 60px rgba(22, 92, 180, 0.12),
+    0 8px 20px rgba(8, 38, 92, 0.06);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+    
+}
+
+.about-container {
+  width: 100%;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.about-heading {
+  max-width: 720px;
+
+  margin-bottom: 65px;
+}
+
+.about-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.about-heading h2 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size:
+    clamp(40px, 5vw, 68px);
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.about-subtitle {
+  margin:
+    20px 0 0;
+
+  color: var(--text-soft);
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.about-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(380px, 0.85fr);
+
+  gap: clamp(50px, 8vw, 110px);
+
+  align-items: center;
+}
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.about-description {
+  max-width: 590px;
+}
+
+.about-description p {
+  margin: 0 0 20px;
+
+  color: var(--text-soft);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.about-description p:first-child {
+  color: var(--text);
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   SMALL TRUST BADGES
+================================================== */
+
+.about-badges {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 32px;
+}
+
+.about-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    9px 12px;
+
+  border-radius: 999px;
+
+  background: var(--ice);
+
+  border:
+    1px solid rgba(23, 108, 255, 0.08);
+
+  color: var(--blue);
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+.about-badge svg {
+  flex-shrink: 0;
+}
+
+
+/* ==================================================
+   PROFILES
+================================================== */
+
+.about-profiles {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* ==================================================
+   PROFILE CARD
+================================================== */
+
+.profile-card {
+  position: relative;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.92);
+
+  border:
+    1px solid rgba(23, 108, 255, 0.11);
+
+  box-shadow:
+    0 15px 45px rgba(8, 38, 92, 0.055);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(23, 108, 255, 0.22);
+
+  box-shadow:
+    0 22px 55px rgba(23, 108, 255, 0.11);
+}
+
+
+/* ==================================================
+   PROFILE MAIN
+================================================== */
+
+.profile-main {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* ==================================================
+   AVATAR
+================================================== */
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--cyan),
+      var(--blue)
+    );
+
+  box-shadow:
+    0 10px 25px rgba(23, 108, 255, 0.18);
+}
+
+
+/* ==================================================
+   PROFILE INFO
+================================================== */
+
+.profile-info {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.profile-info h3 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.02em;
+}
+
+.profile-info small {
+  margin-top: 2px;
+
+  color: var(--text-soft);
+
+  font-size: 9px;
+}
+
+.profile-info span {
+  margin-top: 5px;
+
+  color: var(--blue);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* ==================================================
+   VERIFIED ICON
+================================================== */
+
+.profile-check {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  color: var(--blue);
+}
+
+
+/* ==================================================
+   PROFILE BADGES
+================================================== */
+
+.profile-badges {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 18px;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid rgba(23, 108, 255, 0.07);
+}
+
+.profile-badges span {
+  color: var(--text-soft);
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+  /* ==================================================
+    SECTIONS
+  ================================================== */
+
+  .section {
+    position: relative;
+    padding: 20% 10% 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: 1;
+  }
+
+  /* about */
+  .about-content {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .about-description {
+    max-width: 700px;
+  }
+
+  .about-profiles {
+    max-width: 700px;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 608px) {
+
+  /* ===============================
+     MOBILE VISUAL
+  =============================== */
+
+  .pucaa-visual {
+    width: 75vw;
+
+    right: -12vw;
+    top: 15vh;
+
+    opacity: 0.22;
+
+    filter:
+      drop-shadow(
+        0 20px 35px
+        rgba(7, 63, 150, 0.12)
+      );
+  }
+
+  .pucaa-glow {
+    width: 320px;
+    height: 320px;
+
+    right: -20vw;
+    top: 15vh;
+
+    opacity: 0.2;
+  }
+
+  /* ===============================
+     SECTIONS
+  =============================== */
+
+  .section {
+    min-height: auto;
+
+    padding:
+      120px
+      22px
+      100px;
+  }
+
+  .section-heading {
+    margin-bottom: 38px;
+  }
+
+  .section-heading h2 {
+    font-size:
+      clamp(38px, 11vw, 52px);
+  }
+
+
+}
