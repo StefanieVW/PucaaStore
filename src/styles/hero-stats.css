@@ -6,13 +6,6 @@
   position: relative;
   padding: 0 10%;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgba(248, 251, 255, 0.50),
-      rgba(255, 255, 255, 0.50)
-    );
-
   z-index: 5;
 }
 

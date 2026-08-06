@@ -9,11 +9,7 @@
       rgba(66, 185, 255, 0.08),
       transparent 30%
     ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(248, 251, 255, 0.5)
-    );
+
 }
 
 .hero-content {
