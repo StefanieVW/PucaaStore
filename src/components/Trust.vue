@@ -236,6 +236,127 @@ const { t } = useLanguage()
 
         </div>
 
+        <!-- ALWAYS IN STOCK -->
+
+        <div class="trust-feature">
+
+        <div class="trust-icon">
+
+            <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M4 7.5L12 3L20 7.5V16.5L12 21L4 16.5V7.5Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+            />
+
+            <path
+                d="M4.5 7.5L12 12L19.5 7.5"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+            />
+
+            <path
+                d="M12 12V20.5"
+                stroke="currentColor"
+                stroke-width="1.8"
+            />
+            </svg>
+
+        </div>
+
+        <div class="trust-feature-content">
+
+            <span class="trust-label">
+            05
+            </span>
+
+            <h3>
+            {{ t.trust.stock.title }}
+            </h3>
+
+            <p>
+            {{ t.trust.stock.description }}
+            </p>
+
+        </div>
+
+        </div>
+
+
+        <!-- BULK BUYING -->
+
+        <div class="trust-feature">
+
+        <div class="trust-icon">
+
+            <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M4 7H20"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M6 7V19H18V7"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+            />
+
+            <path
+                d="M8 7L9.5 4H14.5L16 7"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+
+            <path
+                d="M9 12H15"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            />
+
+            <path
+                d="M12 9V15"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            />
+            </svg>
+
+        </div>
+
+        <div class="trust-feature-content">
+
+            <span class="trust-label">
+            06
+            </span>
+
+            <h3>
+            {{ t.trust.bulk.title }}
+            </h3>
+
+            <p>
+            {{ t.trust.bulk.description }}
+            </p>
+
+        </div>
+
+        </div>
+
     </div>
 
     </section>

@@ -147,6 +147,18 @@ const translations = {
         description:
           'Every transaction is monitored and handled with care to provide a safer marketplace experience.',
       },
+
+      stock: {
+        title: 'Always in Stock',
+        description:
+          'DL and BGL are kept available so you can buy the currency you need without unnecessary waiting.',
+      },
+
+      bulk: {
+        title: 'We Buy in Bulk',
+        description:
+          'Have a large amount of DL or BGL to sell? We accept bulk transactions with competitive prices.',
+      },
     },
 
     howItWorks: {
@@ -377,15 +389,15 @@ const translations = {
       },
     },
 
-      trust: {
-        eyebrow: 'KENAPA MEMILIH KAMI',
-        titleBefore: 'Kenapa player memilih',
-        titleHighlight: 'Kami.',
+    trust: {
+      eyebrow: 'MENGAPA MEMILIH KAMI',
+      titleBefore: 'Mengapa pemain memilih',
+      titleHighlight: 'Kami.',
 
       international: {
-        title: 'International',
+        title: 'Internasional',
         description:
-          'Melayani player dan hoster dari berbagai negara dengan marketplace yang dapat diakses secara global.',
+          'Melayani pemain dan hoster dari berbagai negara dengan marketplace yang dapat diakses secara global.',
       },
 
       availability: {
@@ -397,13 +409,25 @@ const translations = {
       affordable: {
         title: 'Harga Terjangkau',
         description:
-          'Harga DL dan BGL yang kompetitif agar transaksi digital tetap mudah dijangkau.',
+          'Harga DL dan BGL yang kompetitif untuk menjaga transaksi digital tetap terjangkau.',
       },
 
       secure: {
         title: 'Transaksi Aman',
         description:
           'Setiap transaksi dipantau dan ditangani dengan baik untuk memberikan pengalaman marketplace yang lebih aman.',
+      },
+
+      stock: {
+        title: 'Stok Selalu Tersedia',
+        description:
+          'DL dan BGL selalu kami sediakan agar kamu bisa membeli currency yang dibutuhkan tanpa perlu menunggu lama.',
+      },
+
+      bulk: {
+        title: 'Terima Penjualan Bulk',
+        description:
+          'Punya DL atau BGL dalam jumlah besar untuk dijual? Kami menerima transaksi bulk dengan harga yang kompetitif.',
       },
     },
 

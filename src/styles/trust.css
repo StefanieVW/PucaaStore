@@ -5,7 +5,6 @@
 .trust {
   position: relative;
   padding: 10% 10% 5%;
-
 }
 
 .trust-panel {
@@ -16,10 +15,12 @@
   width: 100%;
   max-width: 1180px;
 
+  margin: 0 auto;
+
   display: grid;
 
   grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+    repeat(3, minmax(0, 1fr));
 
   background:
     rgba(255, 255, 255, 0.72);
@@ -50,11 +51,12 @@
 
   align-items: flex-start;
 
-  gap: 22px;
+  gap: 18px;
 
+  min-width: 0;
   min-height: 210px;
 
-  padding: 34px;
+  padding: 32px 30px;
 
   transition:
     background 0.3s ease,
@@ -62,21 +64,78 @@
 }
 
 
-/* Vertical divider */
+/* ==================================================
+   TRUST FEATURE REVEAL
+   Uses existing .reveal on .trust-panel
+================================================== */
 
-.trust-feature:nth-child(odd) {
+.trust-panel .trust-feature {
+  opacity: 0;
+  transform: translateY(28px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    background 0.3s ease;
+}
+
+
+/* When existing reveal becomes active */
+
+.trust-panel.reveal.active .trust-feature {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Stagger */
+
+.trust-panel.reveal.active .trust-feature:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.trust-panel.reveal.active .trust-feature:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.trust-panel.reveal.active .trust-feature:nth-child(3) {
+  transition-delay: 0.19s;
+}
+
+.trust-panel.reveal.active .trust-feature:nth-child(4) {
+  transition-delay: 0.26s;
+}
+
+.trust-panel.reveal.active .trust-feature:nth-child(5) {
+  transition-delay: 0.33s;
+}
+
+.trust-panel.reveal.active .trust-feature:nth-child(6) {
+  transition-delay: 0.40s;
+}
+
+
+/* ==================================================
+   DESKTOP DIVIDERS — 3 × 2
+================================================== */
+
+/* Vertical dividers */
+
+.trust-feature:nth-child(1),
+.trust-feature:nth-child(2),
+.trust-feature:nth-child(4),
+.trust-feature:nth-child(5) {
   border-right:
     1px solid rgba(23, 108, 255, 0.10);
 }
 
 
-/* Horizontal divider */
+/* Horizontal divider — first row */
 
-.trust-feature:nth-child(-n + 2) {
+.trust-feature:nth-child(-n + 3) {
   border-bottom:
     1px solid rgba(23, 108, 255, 0.10);
 }
-
 
 /* Hover */
 
@@ -196,39 +255,72 @@
 
 
 /* ==================================================
-   MOBILE
+   TABLET
+   2 × 3
 ================================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
+
+  .trust {
+    padding: 10% 7% 5%;
+  }
 
   .trust-panel {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
 
-    border-radius: 22px;
+    border-radius: 24px;
   }
 
   .trust-feature {
-    min-height: auto;
+    min-height: 190px;
 
-    padding: 25px;
+    padding: 27px 23px;
+
+    gap: 15px;
   }
+
+
+  /* ================================================
+     VERTICAL DIVIDER
+     Right side of left column
+  ================================================ */
 
   .trust-feature:nth-child(odd) {
-    border-right: 0;
+    border-right:
+      1px solid rgba(23, 108, 255, 0.10);
   }
 
-  .trust-feature:nth-child(-n + 2) {
-    border-bottom: 0;
+
+  .trust-feature:nth-child(even) {
+    border-right: none;
   }
 
-  .trust-feature:not(:last-child) {
+
+  /* ================================================
+     HORIZONTAL DIVIDER
+     First 4 items
+  ================================================ */
+
+  .trust-feature:nth-child(-n + 4) {
     border-bottom:
       1px solid rgba(23, 108, 255, 0.10);
   }
 
+  .trust-feature:nth-child(5),
+  .trust-feature:nth-child(6) {
+    border-bottom: none;
+  }
+
+
   .trust-icon {
     width: 46px;
     height: 46px;
+  }
+
+  .trust-icon svg {
+    width: 22px;
+    height: 22px;
   }
 
   .trust-feature h3 {
@@ -238,5 +330,75 @@
   .trust-feature p {
     font-size: 12px;
   }
+}
 
+
+/* ==================================================
+   MOBILE
+   1 × 6
+================================================== */
+
+@media (max-width: 608px) {
+
+  .trust {
+    padding: 12% 6% 7%;
+  }
+
+  .trust-panel {
+    grid-template-columns: 1fr;
+
+    border-radius: 22px;
+  }
+
+
+  .trust-feature {
+    min-height: auto;
+
+    padding: 23px 20px;
+
+    gap: 14px;
+
+    border-right: none !important;
+    border-bottom:
+      1px solid rgba(23, 108, 255, 0.10);
+  }
+
+
+  /* Remove divider from last */
+
+  .trust-feature:last-child {
+    border-bottom: none;
+  }
+
+
+  .trust-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 13px;
+  }
+
+  .trust-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .trust-label {
+    margin-bottom: 6px;
+
+    font-size: 8px;
+  }
+
+  .trust-feature h3 {
+    font-size: 18px;
+  }
+
+  .trust-feature p {
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
 }
