@@ -87,7 +87,7 @@ const translations = {
       reputation: {
         title: 'Trusted Across the Community',
         description:
-          'Our services have been built through years of direct transactions across Facebook, Discord, and WhatsApp. We are also trusted resellers on DiscordGTID and GTMart, serving customers from different parts of the world.',
+          'Our services have been built through years of direct transactions across Facebook, Discord, and WhatsApp. We are also trusted resellers on Discord GTID and GTMart, serving customers from different parts of the world.',
       },
     },
 
@@ -357,7 +357,7 @@ const translations = {
       reputation: {
         title: 'Dipercaya di Komunitas',
         description:
-          'Layanan kami dibangun melalui pengalaman transaksi selama bertahun-tahun melalui Facebook, Discord, dan WhatsApp. Kami juga merupakan trusted reseller di DiscordGTID dan GTMart, serta melayani pelanggan dari berbagai belahan dunia.',
+          'Layanan kami dibangun melalui pengalaman transaksi selama bertahun-tahun melalui Facebook, Discord, dan WhatsApp. Kami juga merupakan trusted reseller di Discord GTID dan GTMart, serta melayani pelanggan dari berbagai belahan dunia.',
       },
     },
 
