@@ -7,6 +7,7 @@ const state = reactive<{
 }>({
   language: 'en',
 })
+const experienceYears = new Date().getFullYear() - 2016
 
 const translations = {
   en: {
@@ -47,7 +48,7 @@ const translations = {
     about: {
       eyebrow: 'ABOUT US',
       title: 'Built on Trust.',
-      subtitle: '10 Years of Experience in the Growtopia Community',
+      subtitle: `${experienceYears} Years of Experience in the Growtopia Community`,
 
       description:
         'Our journey began in 2016 as BGL resellers within the Growtopia community. Over the years, we have built our reputation through more than 15,000 transactions and long-standing relationships with players and hosters from around the world.',
@@ -317,7 +318,7 @@ const translations = {
     about: {
       eyebrow: 'TENTANG KAMI',
       title: 'Dibangun dengan Kepercayaan.',
-      subtitle: '10 Tahun Berpengalaman di Komunitas Growtopia',
+      subtitle: `${experienceYears} Tahun Berpengalaman di Komunitas Growtopia`,
 
       description:
         'Perjalanan kami dimulai pada tahun 2016 sebagai reseller BGL di komunitas Growtopia. Selama bertahun-tahun, kami membangun reputasi melalui lebih dari 15.000 transaksi serta hubungan jangka panjang dengan player dan hoster dari berbagai negara.',

@@ -307,11 +307,11 @@ onMounted(() => {
 
 
     /* ==================================================
-       TRUST
+      TRUST
     ================================================== */
 
     gsap.fromTo(
-      '.trust-item',
+      '.trust-feature',
       {
         opacity: 0,
         y: 30,
@@ -329,7 +329,7 @@ onMounted(() => {
         ease: 'power2.out',
 
         scrollTrigger: {
-          trigger: '.trust-grid',
+          trigger: '.trust-panel',
           start: 'top 80%',
           once: true,
         },
