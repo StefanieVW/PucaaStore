@@ -268,7 +268,7 @@
 @media (max-width: 950px) {
 
   .hero-stats-section {
-    padding: 0 7%;
+    padding: 0 10%;
   }
 
   .hero-stats-grid {
@@ -388,7 +388,7 @@
   }
 
   .hero-stat-card {
-    min-height: 82px;
+    min-height: 65px;
 
     padding: 14px clamp(10px, 3vw, 17px);
 
