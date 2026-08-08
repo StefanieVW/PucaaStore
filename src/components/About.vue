@@ -100,7 +100,11 @@ const { t } = useLanguage()
             <div class="profile-main">
 
               <div class="profile-avatar">
-                VK
+                <img
+                  src="/images/vilen.png"
+                  alt="Vilencia Kurniawan"
+                  loading="lazy"
+                />
               </div>
 
               <div class="profile-info">
@@ -140,7 +144,11 @@ const { t } = useLanguage()
             <div class="profile-main">
 
               <div class="profile-avatar">
-                CC
+                <img
+                  src="/images/cindy.png"
+                  alt="Cindy Clarita"
+                  loading="lazy"
+                />
               </div>
 
               <div class="profile-info">

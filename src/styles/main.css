@@ -47,14 +47,39 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
+
+  min-height: 100%;
+
   font-family: 'Inter', sans-serif;
+
   color: var(--text);
-  background: var(--white);
+
+  background: #ffffff;
+
   overflow-x: hidden;
+}
+
+#app {
+  min-height: 100%;
+}
+
+.site-background {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  min-height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 0;
 }
 
 a {
@@ -71,6 +96,57 @@ button {
   overflow: hidden;
 }
 
+.bg-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* near top */
+
+.bg-glow-one {
+  width: 650px;
+  height: 650px;
+
+  top: 8%;
+  right: -260px;
+
+  background:
+    rgba(66, 185, 255, 0.12);
+}
+
+
+/* middle page */
+
+.bg-glow-two {
+  width: 700px;
+  height: 700px;
+
+  top: 43%;
+  left: -320px;
+
+  background:
+    rgba(23, 108, 255, 0.07);
+}
+
+
+/* lower page */
+
+.bg-glow-three {
+  width: 750px;
+  height: 750px;
+
+  top: 72%;
+  right: -320px;
+
+  background:
+    rgba(66, 185, 255, 0.09);
+}
 
 /* ==================================================
    MAIN
@@ -97,6 +173,8 @@ main {
   justify-content: center;
 
   z-index: 1;
+  background: transparent;
+
 }
 
 .hero-content,
@@ -147,6 +225,328 @@ main {
 }
 
 
+.app-shell {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  isolation: isolate;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fcff 22%,
+      #ffffff 42%,
+      #f5faff 62%,
+      #fafdff 78%,
+      #ffffff 100%
+    );
+}
+
+.site-atmosphere {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.site-content {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+}
+
+/* ==================================================
+   AMBIENT GLOWS
+================================================== */
+
+.ambient-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(60px);
+}
+
+
+/* TOP */
+
+.glow-1 {
+  width: 780px;
+  height: 780px;
+
+  top: 7%;
+  right: -390px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(66, 185, 255, 0.20) 0%,
+      rgba(23, 108, 255, 0.09) 38%,
+      transparent 70%
+    );
+}
+
+
+/* MIDDLE */
+
+.glow-2 {
+  width: 720px;
+  height: 720px;
+
+  top: 42%;
+  left: -390px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(66, 185, 255, 0.15) 0%,
+      rgba(23, 108, 255, 0.06) 42%,
+      transparent 72%
+    );
+}
+
+
+/* LOWER */
+
+.glow-3 {
+  width: 820px;
+  height: 820px;
+
+  top: 72%;
+  right: -440px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(66, 185, 255, 0.16) 0%,
+      rgba(23, 108, 255, 0.055) 45%,
+      transparent 72%
+    );
+}
+
+
+/* ==================================================
+   DOT PATTERNS
+================================================== */
+
+.ambient-dots {
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(23, 108, 255, 0.42) 1.3px,
+      transparent 1.4px
+    );
+
+  background-size: 18px 18px;
+
+  -webkit-mask-image:
+    radial-gradient(
+      circle,
+      black 25%,
+      transparent 75%
+    );
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black 25%,
+      transparent 75%
+    );
+
+  opacity: 0.52;
+}
+
+.dots-1 {
+  top: 28%;
+  left: 1%;
+}
+
+.dots-2 {
+  top: 66%;
+  right: 1%;
+}
+
+
+/* ==================================================
+   ORBITS
+================================================== */
+
+.ambient-orbit {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(23, 108, 255, 0.11);
+}
+
+.orbit-1 {
+  width: 520px;
+  height: 520px;
+
+  top: 21%;
+  right: -270px;
+}
+
+.orbit-2 {
+  width: 430px;
+  height: 430px;
+
+  top: 60%;
+  left: -240px;
+
+  border-color:
+    rgba(66, 185, 255, 0.13);
+}
+
+/* ==================================================
+   GLOBAL DIAMOND SPARKLES — BLUE GLOW
+================================================== */
+
+.ambient-sparkle {
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8be0ff 0%,
+      var(--cyan) 45%,
+      var(--blue) 100%
+    );
+
+  transform: rotate(45deg);
+
+  border-radius: 2px;
+
+  opacity: 0.9;
+
+  pointer-events: none;
+
+  box-shadow:
+    0 0 6px rgba(116, 218, 255, 0.95),
+    0 0 14px rgba(66, 185, 255, 0.70),
+    0 0 28px rgba(23, 108, 255, 0.42),
+    0 0 48px rgba(23, 108, 255, 0.20);
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(66, 185, 255, 0.75)
+    );
+}
+
+
+/* ==================================================
+   HORIZONTAL LIGHT RAY
+================================================== */
+
+.ambient-sparkle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 38px;
+  height: 2px;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-45deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(125, 218, 255, 0.12) 15%,
+      rgba(66, 185, 255, 0.70) 42%,
+      rgba(255, 255, 255, 0.95) 50%,
+      rgba(66, 185, 255, 0.70) 58%,
+      rgba(125, 218, 255, 0.12) 85%,
+      transparent 100%
+    );
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(66, 185, 255, 0.65)
+    );
+}
+
+
+/* ==================================================
+   VERTICAL LIGHT RAY
+================================================== */
+
+.ambient-sparkle::after {
+  content: "";
+
+  position: absolute;
+
+  width: 2px;
+  height: 38px;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-45deg);
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(125, 218, 255, 0.12) 15%,
+      rgba(66, 185, 255, 0.70) 42%,
+      rgba(255, 255, 255, 0.95) 50%,
+      rgba(66, 185, 255, 0.70) 58%,
+      rgba(125, 218, 255, 0.12) 85%,
+      transparent 100%
+    );
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(66, 185, 255, 0.65)
+    );
+}
+
+.sparkle-1 {
+  top: 75%;
+  left: 7%;
+}
+
+.sparkle-2 {
+  top: 73%;
+  right: 13%;
+}
+
+
 /* ==================================================
    TABLET
 ================================================== */
@@ -166,6 +566,41 @@ main {
     justify-content: center;
 
     z-index: 1;
+  }
+
+  .glow-1 {
+    width: 600px;
+    height: 600px;
+
+    right: -360px;
+  }
+
+  .glow-2 {
+    width: 600px;
+    height: 600px;
+
+    left: -370px;
+  }
+
+  .glow-3 {
+    width: 650px;
+    height: 650px;
+
+    right: -390px;
+  }
+
+  .orbit-1 {
+    width: 400px;
+    height: 400px;
+
+    right: -240px;
+  }
+
+  .orbit-2 {
+    width: 340px;
+    height: 340px;
+
+    left: -210px;
   }
 }
 
@@ -222,5 +657,83 @@ main {
       clamp(38px, 11vw, 52px);
   }
 
+  .ambient-glow {
+    filter: blur(45px);
+  }
+
+
+  .glow-1 {
+    width: 400px;
+    height: 400px;
+
+    right: -270px;
+  }
+
+
+  .glow-2 {
+    width: 420px;
+    height: 420px;
+
+    left: -290px;
+  }
+
+
+  .glow-3 {
+    width: 430px;
+    height: 430px;
+
+    right: -300px;
+  }
+
+
+  .orbit-1 {
+    width: 260px;
+    height: 260px;
+
+    right: -175px;
+  }
+
+
+  .orbit-2 {
+    width: 240px;
+    height: 240px;
+
+    left: -170px;
+  }
+
+
+  .ambient-dots {
+    width: 100px;
+    height: 100px;
+
+    background-size: 15px 15px;
+
+    opacity: 0.35;
+  }
+
+
+  .ambient-sparkle {
+    width: 9px;
+    height: 9px;
+
+  }
+
+  .ambient-sparkle::before {
+    width: 21px;
+  }
+
+  .ambient-sparkle::after {
+    height: 21px;
+  }
+
+  .sparkle-1 {
+    opacity: 0;
+  }
+
+  .sparkle-2 {
+    top: 77%;
+    right: 13%;
+    opacity: 0.7;
+  }
 
 }
