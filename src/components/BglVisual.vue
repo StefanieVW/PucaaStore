@@ -2,7 +2,7 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import bglImage from '../assets/bgl1.png'
+import bglImage from '../assets/bgl.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
