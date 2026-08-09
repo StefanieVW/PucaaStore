@@ -113,6 +113,15 @@ onMounted(() => {
 
       if (!scrollWrapper.value) return
 
+      // RESET STATE SAAT BREAKPOINT BERGANTI
+      gsap.set(scrollWrapper.value, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        scale: 1,
+        rotation: 0,
+      })
+
       const scrollTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: '.experience',
@@ -537,6 +546,14 @@ onMounted(() => {
     mm.add('(max-width: 608px)', () => {
 
       if (!scrollWrapper.value) return
+
+      gsap.set(scrollWrapper.value, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        scale: 1,
+        rotation: 0,
+      })
 
       const scrollTimeline = gsap.timeline({
         scrollTrigger: {
