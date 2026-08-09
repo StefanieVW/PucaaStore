@@ -196,12 +196,14 @@
     width: 40vw;
 
     left: 65vw;
+    right: auto;
+
     top: 20vh;
   }
+
   .bgl-floating-1 {
     left: -125px;
     top: 20px;
-
     width: 90px;
   }
 }
@@ -213,13 +215,14 @@
     width: 30vw;
 
     left: 70vw;
+    right: auto;
+
     top: 20vh;
   }
 
   .bgl-floating-1 {
     left: -115px;
     top: 20px;
-
     width: 75px;
   }
 }
@@ -231,6 +234,8 @@
     width: 50vw;
 
     left: 60vw;
+    right: auto;
+
     top: 20vh;
   }
 

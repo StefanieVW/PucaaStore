@@ -128,6 +128,7 @@ onMounted(() => {
           start: 'top top',
           end: 'bottom bottom',
           scrub: 1.4,
+          invalidateOnRefresh: true,
         },
       })
 
@@ -359,12 +360,21 @@ onMounted(() => {
 
       if (!scrollWrapper.value) return
 
+      gsap.set(scrollWrapper.value, {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        scale: 1,
+        rotation: 0,
+      })
+
       const scrollTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: '.experience',
           start: 'top top',
           end: 'bottom bottom',
           scrub: 1.4,
+          invalidateOnRefresh: true,
         },
       })
 
@@ -561,6 +571,7 @@ onMounted(() => {
           start: 'top top',
           end: 'bottom bottom',
           scrub: 1.5,
+          invalidateOnRefresh: true,
         },
       })
 
