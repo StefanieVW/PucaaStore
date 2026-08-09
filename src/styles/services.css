@@ -7,13 +7,14 @@
 
 .section-heading-services {
   position: relative;
-  margin-left: 40%;
   z-index: 10;
-  text-align: right;
-  max-width: 650px;
 
+  max-width: 70%;
+  margin-left: auto;   /* dorong seluruh block ke kanan */
+  margin-right: 0;     /* mentok kanan parent */
   margin-bottom: 60px;
-  
+
+  text-align: right;
 }
 
 .section-heading-services h2 {
@@ -29,8 +30,6 @@
 
 .section-heading-services p {
   margin-top: 22px;
-
-  max-width: 650px;
 
   color: var(--text-soft);
 
@@ -234,9 +233,7 @@
 }
 
 @media (max-width: 1308px) {
-  .section-heading-services {
-    margin-left: 30%;
-  }
+
 }
 
 
@@ -268,6 +265,8 @@
   .section-heading-services {
     margin-bottom: 38px;
     text-align: right;
+    max-width: 70%;
+
   }
 
   .section-heading-services h2 {
