@@ -108,7 +108,7 @@ const translations = {
       sell: {
         title: 'Sell DL & BGL',
         description:
-          'Turn your available DL and BGL into value through a simple transaction process.',
+          'Sell your DL and BGL easily through a simple, fast, and secure transaction process.',
         action: 'Sell Now',
       },
 
@@ -378,10 +378,10 @@ const translations = {
       sell: {
         title: 'Jual DL & BGL',
         description:
-          'Ubah DL dan BGL yang kamu miliki menjadi nilai melalui proses transaksi yang sederhana.',
+          'Jual DL dan BGL kamu dengan mudah melalui proses transaksi yang cepat, sederhana, dan aman.',
         action: 'Jual Sekarang',
       },
-
+      
       global: {
         title: 'Komunitas Global',
         description:
