@@ -13,6 +13,7 @@
   z-index: 10;
 }
 
+
 /* =====================================================
    COLLAB AMBIENT LIGHT
 ===================================================== */
@@ -84,7 +85,8 @@
     drop-shadow(0 0 10px rgba(24, 117, 242, 0.50))
     drop-shadow(0 0 18px rgba(24, 117, 242, 0.30));
 
-  animation: pucaaGlow 3s ease-in-out infinite;
+  animation:
+    pucaaGlow 3s ease-in-out infinite;
 }
 
 
@@ -102,12 +104,19 @@
   background:
     conic-gradient(
       from 0deg,
+
       transparent 0deg,
+
       rgba(55, 145, 255, 0.9) 35deg,
+
       transparent 70deg,
+
       rgba(24, 117, 242, 0.8) 145deg,
+
       transparent 190deg,
+
       rgba(75, 160, 255, 0.9) 250deg,
+
       transparent 310deg
     );
 
@@ -115,7 +124,8 @@
 
   opacity: 0.8;
 
-  animation: electricRotate 2.8s linear infinite;
+  animation:
+    electricRotate 2.8s linear infinite;
 
   z-index: 1;
 }
@@ -135,12 +145,15 @@
 
   border-radius: 50%;
 
-  border: 1px solid rgba(70, 150, 255, 0.8);
+  border:
+    1px solid rgba(70, 150, 255, 0.8);
 
   opacity: 0;
 
-  animation: electricPulse 2.4s ease-out infinite;
+  animation:
+    electricPulse 2.4s ease-out infinite;
 }
+
 
 .electric-ring::after {
   animation-delay: 1.2s;
@@ -165,8 +178,10 @@
     drop-shadow(0 0 10px rgba(154, 50, 255, 0.50))
     drop-shadow(0 0 20px rgba(128, 0, 255, 0.30));
 
-  animation: cipanGlow 3s ease-in-out infinite;
+  animation:
+    cipanGlow 3s ease-in-out infinite;
 }
+
 
 /* =====================================================
    CIPAN LOGO WRAPPER
@@ -177,6 +192,9 @@
 
   overflow: visible;
 }
+
+
+/* rotating texture */
 
 .cipan-logo-wrap::before {
   content: "";
@@ -204,8 +222,12 @@
 
   z-index: 4;
 
-  animation: cipanTexture 5s linear infinite;
+  animation:
+    cipanTexture 5s linear infinite;
 }
+
+
+/* light sweep */
 
 .cipan-logo-wrap::after {
   content: "";
@@ -237,8 +259,10 @@
 
   z-index: 4;
 
-  animation: cipanSweep 4s ease-in-out infinite;
+  animation:
+    cipanSweep 4s ease-in-out infinite;
 }
+
 
 /* =====================================================
    PURPLE AURA
@@ -252,61 +276,160 @@
   border-radius: 50%;
 
   background:
-    radial-gradient(
-      circle,
-      rgba(190, 80, 255, 0.45) 0%,
-      rgba(137, 43, 226, 0.25) 40%,
-      transparent 72%
+    conic-gradient(
+      from 0deg,
+
+      transparent 0deg,
+
+      rgba(215, 110, 255, 0.9) 35deg,
+
+      transparent 70deg,
+
+      rgba(175, 65, 255, 0.8) 145deg,
+
+      transparent 190deg,
+
+      rgba(200, 90, 255, 0.9) 250deg,
+
+      transparent 310deg
     );
 
-  filter: blur(7px);
+  filter: blur(3px);
 
   opacity: 0.8;
 
-  animation: purplePulse 2.5s ease-in-out infinite;
+  animation:
+    purpleRotate 2.8s linear infinite;
 
   z-index: 1;
 }
 
+.purple-aura::before,
+.purple-aura::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -2px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(205, 100, 255, 0.8);
+
+  opacity: 0;
+
+  animation:
+    purpleElectricPulse 2.4s ease-out infinite;
+}
+
+.purple-aura::after {
+  animation-delay: 1.2s;
+}
 
 /* =====================================================
-   X SYMBOL — NEON ENERGY
+   X — CURRENT SOFT CYAN × VIOLET NEON
 ===================================================== */
 
 .collab-x {
   position: relative;
+  z-index: 5;
+
+  width: 32px;
+  height: 32px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 30px;
-  height: 30px;
-
   flex-shrink: 0;
 
-  font-size: 27px;
-  font-weight: 400;
+  font-size: 29px;
+  font-weight: 500;
   line-height: 1;
 
-  color: #ffffff;
+  /* soft cyan → blue → violet */
+  background:
+    linear-gradient(
+      105deg,
 
-  /* WHITE CORE + SOFT BLUE NEON */
-    text-shadow:
-    0 0 2px #ffffff,
-    0 0 5px #ffffff,
-    0 0 10px rgba(130, 240, 255, 1),
-    0 0 18px rgba(50, 215, 255, 1),
-    0 0 30px rgba(0, 170, 255, 1),
-    0 0 45px rgba(0, 125, 255, 1),
-    0 0 65px rgba(0, 95, 255, 0.95),
-    0 0 90px rgba(0, 75, 255, 0.75);
+      #69d6ff 0%,
+      #5bc8ff 18%,
 
-  animation: xNeonGlow 2.4s ease-in-out infinite;
+      #58aefc 35%,
+      #6f98f8 48%,
 
-  z-index: 5;
+      #8b83f6 61%,
+      #a476f3 76%,
+
+      #bb75ee 100%
+    );
+
+  /*
+    Jangan dibuat terlalu besar.
+    165% bikin perpindahan warnanya subtle.
+  */
+  background-size: 165% 100%;
+
+  background-position: 18% 50%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  filter:
+    drop-shadow(0 0 2px rgba(240, 250, 255, 0.90))
+    drop-shadow(0 0 5px rgba(95, 198, 255, 0.62))
+    drop-shadow(0 0 9px rgba(109, 150, 248, 0.40))
+    drop-shadow(0 0 12px rgba(170, 110, 240, 0.28));
+
+  animation:
+    xGradientDrift 8s ease-in-out infinite alternate,
+    xNeonBreath 3.6s ease-in-out infinite;
+
+  transition:
+    filter 0.35s ease;
+
+  isolation: isolate;
 }
 
+
+/* =====================================================
+   X SOFT AURA
+===================================================== */
+
+.collab-x::before {
+  content: "";
+
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.14) 0%,
+      rgba(105, 205, 255, 0.18) 24%,
+      rgba(115, 145, 250, 0.12) 48%,
+      rgba(177, 102, 240, 0.09) 66%,
+      transparent 80%
+    );
+
+  filter: blur(7px);
+
+  opacity: 0.72;
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  animation:
+    xAuraBreath 3.6s ease-in-out infinite;
+}
 
 /* =====================================================
    HOVER
@@ -319,6 +442,7 @@
     drop-shadow(0 0 30px rgba(0, 120, 255, 0.7));
 }
 
+
 .collaboration-brand:hover .cipan-logo {
   filter:
     drop-shadow(0 0 5px rgba(210, 100, 255, 1))
@@ -326,21 +450,18 @@
     drop-shadow(0 0 32px rgba(130, 0, 255, 0.7));
 }
 
+
 .collaboration-brand:hover .collab-x {
-  color: #ffffff;
-
-  transform: scale(1.12);
-
-  text-shadow:
-    0 0 2px #ffffff,
-    0 0 6px rgba(220, 250, 255, 1),
-    0 0 12px rgba(80, 210, 255, 1),
-    0 0 22px rgba(30, 160, 255, 0.9),
-    0 0 35px rgba(30, 130, 255, 0.65);
+  filter:
+    drop-shadow(0 0 3px rgba(245, 252, 255, 0.95))
+    drop-shadow(0 0 6px rgba(105, 205, 255, 0.72))
+    drop-shadow(0 0 11px rgba(120, 145, 248, 0.52))
+    drop-shadow(0 0 15px rgba(175, 105, 240, 0.38));
 }
 
+
 /* =====================================================
-   ANIMATIONS
+   PUCAA ANIMATIONS
 ===================================================== */
 
 @keyframes electricRotate {
@@ -383,6 +504,10 @@
 }
 
 
+/* =====================================================
+   CIPAN ANIMATIONS
+===================================================== */
+
 @keyframes cipanGlow {
   0%,
   100% {
@@ -393,6 +518,7 @@
     transform: scale(1.035);
   }
 }
+
 
 @keyframes cipanTexture {
   from {
@@ -426,6 +552,15 @@
   }
 }
 
+@keyframes purpleRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes purplePulse {
   0%,
@@ -440,80 +575,188 @@
   }
 }
 
-
-@keyframes xNeonGlow {
-  0%,
-  100% {
-    opacity: 0.9;
-
-    text-shadow:
-      0 0 2px rgba(255, 255, 255, 1),
-      0 0 5px rgba(210, 247, 255, 0.95),
-      0 0 10px rgba(80, 200, 255, 0.85),
-      0 0 18px rgba(30, 150, 255, 0.65),
-      0 0 28px rgba(30, 130, 255, 0.35);
-
-    transform: scale(1);
+@keyframes purpleElectricPulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
   }
 
-  50% {
-    opacity: 1;
+  25% {
+    opacity: 0.9;
+  }
 
-    text-shadow:
-      0 0 2px rgba(255, 255, 255, 1),
-      0 0 6px rgba(230, 250, 255, 1),
-      0 0 12px rgba(90, 210, 255, 1),
-      0 0 22px rgba(40, 165, 255, 0.85),
-      0 0 34px rgba(30, 130, 255, 0.50);
-
-    transform: scale(1.04);
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
   }
 }
 
+/* =====================================================
+   X ANIMATIONS
+===================================================== */
+
+/*
+   Warna bergerak bolak-balik.
+   Tidak reset langsung purple → cyan.
+*/
+@keyframes xGradientDrift {
+  0% {
+    background-position: 18% 50%;
+  }
+
+  50% {
+    background-position: 50% 50%;
+  }
+
+  100% {
+    background-position: 82% 50%;
+  }
+}
+
+
+/* subtle glow breathing */
+
+@keyframes xNeonBreath {
+
+  0%,
+  100% {
+    transform: scale(1);
+
+    filter:
+      drop-shadow(0 0 2px rgba(255, 255, 255, 0.92))
+      drop-shadow(0 0 4px rgba(105, 205, 255, 0.72))
+      drop-shadow(0 0 8px rgba(100, 155, 255, 0.46))
+      drop-shadow(0 0 12px rgba(170, 110, 240, 0.28));
+  }
+
+  50% {
+    transform: scale(1.025);
+
+    filter:
+      drop-shadow(0 0 2px rgba(255, 255, 255, 1))
+      drop-shadow(0 0 5px rgba(105, 210, 255, 0.82))
+      drop-shadow(0 0 9px rgba(105, 155, 255, 0.56))
+      drop-shadow(0 0 14px rgba(175, 105, 240, 0.34));
+  }
+}
+
+
+/* X soft atmosphere */
+
+@keyframes xAuraBreath {
+  0%,
+  100% {
+    transform: scale(0.95);
+    opacity: 0.58;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 0.78;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
 @media (max-width: 658px) {
-    .collaboration-brand {
-        gap: 5px;
-    }
 
-    .pucaa-logo {
-        width: 55px;
-        height: 55px;
-    }
-    .cipan-logo {
-        width: 50px;
-        height: 50px;
-    }
+  .collaboration-brand {
+    gap: 5px;
+  }
 
-    /* =========================================
-        MOBILE ELECTRIC AURA
-    ========================================= */
 
-    .electric-ring {
-        inset: 2px;
+  /* =========================
+     PUCAA
+  ========================= */
 
-        filter: blur(2px);
+  .pucaa-logo {
+    width: 55px;
+    height: 55px;
 
-        opacity: 0.65;
-    }
+    filter:
+      drop-shadow(0 0 3px rgba(0, 183, 255, 0.70))
+      drop-shadow(0 0 7px rgba(0, 140, 255, 0.45))
+      drop-shadow(0 0 12px rgba(0, 119, 255, 0.25));
+  }
 
-    .electric-ring::before,
-    .electric-ring::after {
-        inset: 2px;
 
-        border-width: 1px;
+  .electric-ring {
+    inset: 2px;
 
-        opacity: 0;
-    }
+    filter: blur(2px);
 
-    /* =========================================
-        MOBILE PUCAA GLOW
-    ========================================= */
+    opacity: 0.65;
+  }
 
-    .pucaa-logo {
-        filter:
-        drop-shadow(0 0 3px rgba(0, 183, 255, 0.70))
-        drop-shadow(0 0 7px rgba(0, 140, 255, 0.45))
-        drop-shadow(0 0 12px rgba(0, 119, 255, 0.25));
-    }
 
+  .electric-ring::before,
+  .electric-ring::after {
+    inset: 2px;
+
+    border-width: 1px;
+
+    opacity: 0;
+  }
+
+
+  /* =========================
+     CIPAN
+  ========================= */
+
+  .cipan-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+
+  /* =========================
+     X
+  ========================= */
+
+  .collab-x {
+    width: 24px;
+    height: 24px;
+
+    font-size: 23px;
+
+    background-size: 165% 100%;
+
+    filter:
+      drop-shadow(0 0 2px rgba(240, 250, 255, 0.82))
+      drop-shadow(0 0 4px rgba(95, 198, 255, 0.52))
+      drop-shadow(0 0 7px rgba(155, 110, 240, 0.26));
+  }
+
+
+  .collab-x::before {
+    width: 31px;
+    height: 31px;
+
+    filter: blur(6px);
+
+    opacity: 0.65;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .pucaa-logo,
+  .cipan-logo,
+  .electric-ring,
+  .electric-ring::before,
+  .electric-ring::after,
+  .purple-aura,
+  .cipan-logo-wrap::before,
+  .cipan-logo-wrap::after,
+  .collab-x,
+  .collab-x::before {
+    animation: none;
+  }
 }

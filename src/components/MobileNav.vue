@@ -3,6 +3,7 @@ import { ref, watch } from 'vue'
 import gsap from 'gsap'
 import { useLanguage } from '../composables/useLanguage'
 import pucaaLogo from '../assets/pucaa-logo.png'
+import cipanLogo from '../assets/cipan-logo.png'
 
 const open = ref(false)
 
@@ -67,6 +68,21 @@ watch(open, (isOpen) => {
           class="brand-logo pucaa-logo"
         />
       </div>
+
+      <!-- X -->
+      <span class="collab-x">×</span>
+
+      <!-- CIPAN -->
+      <div class="collab-logo cipan-logo-wrap">
+        <span class="purple-aura"></span>
+
+        <img
+          :src="cipanLogo"
+          alt="CIPAN"
+          class="brand-logo cipan-logo"
+        />
+      </div>
+
     </a>
 
 

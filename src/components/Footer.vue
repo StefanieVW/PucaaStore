@@ -8,6 +8,7 @@ import {
 
 import { useLanguage } from '../composables/useLanguage'
 import pucaaLogo from '../assets/pucaa-logo.png'
+import cipanLogo from '../assets/cipan-logo.png'
 
 const { t } = useLanguage()
 </script>
@@ -22,6 +23,7 @@ const { t } = useLanguage()
 
         <a href="#home" class="nav-brand collaboration-brand">
 
+          <!-- PUCAA -->
           <div class="collab-logo pucaa-logo-wrap">
             <span class="electric-ring"></span>
 
@@ -32,6 +34,19 @@ const { t } = useLanguage()
             />
           </div>
 
+          <!-- X -->
+          <span class="collab-x">×</span>
+
+          <!-- CIPAN -->
+          <div class="collab-logo cipan-logo-wrap">
+            <span class="purple-aura"></span>
+
+            <img
+              :src="cipanLogo"
+              alt="CIPAN"
+              class="brand-logo cipan-logo"
+            />
+          </div>
         </a>
 
         <p>

@@ -51,7 +51,7 @@ const translations = {
       subtitle: `${experienceYears} Years of Experience in the Growtopia Community`,
 
       description:
-        'Our journey began in 2016 as BGL resellers within the Growtopia community. Over the years, we have built our reputation through more than 15,000 transactions and long-standing relationships with players and hosters from around the world.',
+        'Our journey began in 2016 as BGL resellers within the Growtopia community. Over the years, we have built our reputation through more than 100,000 transactions and long-standing relationships with players and hosters from around the world.',
 
       commitment:
         'Today, we continue to serve customers worldwide — from the United States and Europe to the Middle East, Asia, and beyond. Transactions are available 24/7 through Facebook, Discord, and WhatsApp, with no holidays and no closing hours.',
@@ -321,7 +321,7 @@ const translations = {
       subtitle: `${experienceYears} Tahun Berpengalaman di Komunitas Growtopia`,
 
       description:
-        'Perjalanan kami dimulai pada tahun 2016 sebagai reseller BGL di komunitas Growtopia. Selama bertahun-tahun, kami membangun reputasi melalui lebih dari 15.000 transaksi serta hubungan jangka panjang dengan player dan hoster dari berbagai negara.',
+        'Perjalanan kami dimulai pada tahun 2016 sebagai reseller BGL di komunitas Growtopia. Selama bertahun-tahun, kami membangun reputasi melalui lebih dari 100.000 transaksi serta hubungan jangka panjang dengan player dan hoster dari berbagai negara.',
 
       commitment:
         'Hingga saat ini, kami terus melayani pelanggan dari seluruh dunia — mulai dari Amerika Serikat dan Eropa hingga Timur Tengah, Asia, dan berbagai wilayah lainnya. Transaksi tersedia 24/7 melalui Facebook, Discord, dan WhatsApp, tanpa hari libur maupun jam tutup.',

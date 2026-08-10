@@ -2,6 +2,7 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useLanguage } from '../composables/useLanguage'
 import pucaaLogo from '../assets/pucaa-logo.png'
+import cipanLogo from '../assets/cipan-logo.png'
 
 const { language, t, setLanguage } = useLanguage()
 
@@ -65,6 +66,20 @@ onUnmounted(() => {
           :src="pucaaLogo"
           alt="PUCAA"
           class="brand-logo pucaa-logo"
+        />
+      </div>
+
+      <!-- X -->
+      <span class="collab-x">×</span>
+
+      <!-- CIPAN -->
+      <div class="collab-logo cipan-logo-wrap">
+        <span class="purple-aura"></span>
+
+        <img
+          :src="cipanLogo"
+          alt="CIPAN"
+          class="brand-logo cipan-logo"
         />
       </div>
     </a>
