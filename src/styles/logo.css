@@ -710,6 +710,23 @@
     height: 50px;
   }
 
+  .purple-aura {
+    inset: 2px;
+
+    filter: blur(2px);
+
+    opacity: 0.65;
+  }
+
+  .purple-aura::before,
+  .purple-aura::after {
+    inset: 2px;
+
+    border-width: 1px;
+
+    opacity: 0;
+  }
+
 
   /* =========================
      X
