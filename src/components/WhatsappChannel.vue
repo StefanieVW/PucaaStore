@@ -35,17 +35,7 @@ const { t } = useLanguage()
           rel="noopener noreferrer"
           class="channel-button channel-button-primary"
         >
-          <span>WhatsApp</span>
-          <Send :size="16" />
-        </a>
-
-        <a
-          href="https://www.instagram.com/pucaa_store"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="channel-button channel-button-secondary"
-        >
-          <span>Instagram</span>
+          <span>Join WhatsApp Channel</span>
           <Send :size="16" />
         </a>
 

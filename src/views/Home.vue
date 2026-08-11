@@ -128,7 +128,7 @@ onUnmounted(() => {
 
           <div class="hero-actions">
 
-            <a href="#contact" class="btn btn-primary">
+            <a href="#contact" class="btn btn-primary btn-breathe">
               {{ t.hero.contact }}
             </a>
 
@@ -261,7 +261,7 @@ onUnmounted(() => {
 
           <a
             href="#contact"
-            class="btn btn-primary cta-contact-link"
+            class="btn btn-primary cta-contact-link btn-breathe"
             @click.prevent="handleContactClick"
           >
             {{ t.cta.button }}

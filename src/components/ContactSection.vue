@@ -4,21 +4,35 @@ import { Send } from 'lucide-vue-next'
 import discordIcon from '../assets/icons/discord.svg'
 import whatsappIcon from '../assets/icons/whatsapp.svg'
 import facebookIcon from '../assets/icons/facebook.svg'
+import instagramIcon from '../assets/icons/instagram.svg'
 import { useLanguage } from '../composables/useLanguage'
 
 const { t } = useLanguage()
 
 const contacts = [
+
+  // Instagram
+  {
+    platform: 'Instagram',
+    label: 'Official Account',
+    admin: 'Pucaa Store',
+    icon: instagramIcon,
+    url: 'https://www.instagram.com/pucaa_store',
+  },
+
   // WhatsApp
   {
     platform: 'WhatsApp',
-    admin: 'Admin 1 -Cindy',
+    label: 'Admin',
+    admin: 'Admin 1 - Cindy',
     icon: whatsappIcon,
     url: 'https://wa.me/6281264722301',
   },
+
   {
     platform: 'WhatsApp',
-    admin: 'Admin 2 -Vilencia',
+    label: 'Admin',
+    admin: 'Admin 2 - Vilencia',
     icon: whatsappIcon,
     url: 'https://wa.me/6281944361109',
   },
@@ -26,13 +40,16 @@ const contacts = [
   // Discord
   {
     platform: 'Discord',
-    admin: 'Admin 1 -Cindy',
+    label: 'Admin',
+    admin: 'Admin 1 - Cindy',
     icon: discordIcon,
     url: 'https://discord.com/users/545596758693117953',
   },
+
   {
     platform: 'Discord',
-    admin: 'Admin 2 -Vilencia',
+    label: 'Admin',
+    admin: 'Admin 2 - Vilencia',
     icon: discordIcon,
     url: 'https://discord.com/users/399250119024705546',
   },
@@ -40,17 +57,22 @@ const contacts = [
   // Facebook
   {
     platform: 'Facebook',
-    admin: 'Admin 1 -Cindy',
+    label: 'Admin',
+    admin: 'Admin 1 - Cindy',
     icon: facebookIcon,
     url: 'https://facebook.com/cindyphannnn',
   },
+
   {
     platform: 'Facebook',
-    admin: 'Admin 2 -Vilencia',
+    label: 'Admin',
+    admin: 'Admin 2 - Vilencia',
     icon: facebookIcon,
     url: 'https://facebook.com/vilenciakurni',
   },
+
 ]
+
 </script>
 
 <template>
@@ -111,7 +133,7 @@ const contacts = [
         <div class="contact-card-content">
 
           <span class="contact-label">
-            {{ t.contact.adminLabel }}
+            {{ contact.label }}
           </span>
 
           <h3>

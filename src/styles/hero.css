@@ -126,6 +126,41 @@
     border: 1px solid var(--blue);
 }
 
+/* ==================================================
+   BUTTON BREATH — SOFT BLUE GLOW
+================================================== */
+
+.btn-breathe {
+  position: relative;
+
+  animation:
+    buttonBreath 1.2s ease-in-out infinite;
+
+  will-change:
+    transform,
+    box-shadow;
+}
+
+@keyframes buttonBreath {
+
+  0%,
+  100% {
+    transform: scale(1);
+
+    box-shadow:
+      0 4px 10px rgba(23, 108, 255, 0.45),
+      0 0 6px rgba(66, 185, 255, 0.28);
+  }
+
+  50% {
+    transform: scale(1.018);
+
+    box-shadow:
+      0 5px 14px rgba(23, 108, 255, 0.65),
+      0 0 9px rgba(66, 185, 255, 0.45);
+  }
+}
+
 @media (max-width: 608px) {
     .hero {
         align-items: left;

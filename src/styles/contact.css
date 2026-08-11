@@ -69,6 +69,7 @@
     repeat(3, minmax(0, 1fr));
 
   grid-template-areas:
+    "ig ig ig"
     "wa1 dc1 fb1"
     "wa2 dc2 fb2";
 
@@ -82,38 +83,41 @@
    CARD POSITIONS
 ================================================== */
 
-/* WhatsApp */
+/* Instagram */
 
 .contact-card:nth-child(1) {
+  grid-area: ig;
+}
+
+/* WhatsApp */
+
+.contact-card:nth-child(2) {
   grid-area: wa1;
 }
 
-.contact-card:nth-child(2) {
+.contact-card:nth-child(3) {
   grid-area: wa2;
 }
 
-
 /* Discord */
 
-.contact-card:nth-child(3) {
+.contact-card:nth-child(4) {
   grid-area: dc1;
 }
 
-.contact-card:nth-child(4) {
+.contact-card:nth-child(5) {
   grid-area: dc2;
 }
 
-
 /* Facebook */
 
-.contact-card:nth-child(5) {
+.contact-card:nth-child(6) {
   grid-area: fb1;
 }
 
-.contact-card:nth-child(6) {
+.contact-card:nth-child(7) {
   grid-area: fb2;
 }
-
 
 /* ==================================================
    CONTACT CARD
@@ -339,6 +343,7 @@
       repeat(2, minmax(0, 1fr));
 
     grid-template-areas:
+      "ig ig"
       "wa1 wa2"
       "dc1 dc2"
       "fb1 fb2";
@@ -359,21 +364,19 @@
       20px;
   }
 
-
   .contact-heading {
     margin-bottom: 35px;
   }
-
 
   .contact-heading h2 {
     font-size: 40px;
   }
 
-
   .contact-grid {
     grid-template-columns: 1fr;
 
     grid-template-areas:
+      "ig"
       "wa1"
       "wa2"
       "dc1"
@@ -384,22 +387,135 @@
     gap: 14px;
   }
 
-
   .contact-card {
     min-height: 215px;
 
     padding: 22px;
   }
 
-
   .contact-icon {
     width: 44px;
     height: 44px;
   }
 
-
   .contact-brand-icon {
     width: 23px;
     height: 23px;
   }
+
+}
+
+/* ==================================================
+   INSTAGRAM FEATURED CARD
+   DESKTOP + TABLET
+================================================== */
+
+@media (min-width: 609px) {
+
+  .contact-card:nth-child(1) {
+    min-height: 135px;
+
+    display: grid;
+
+    grid-template-columns:
+      auto
+      minmax(0, 1fr)
+      auto;
+
+    grid-template-areas:
+      "top content action";
+
+    align-items: center;
+
+    column-gap: 28px;
+
+    padding:
+      26px
+      30px;
+  }
+
+  /* Instagram icon + platform */
+
+  .contact-card:nth-child(1)
+  .contact-card-top {
+    grid-area: top;
+
+    min-width: 145px;
+  }
+
+  /* Instagram account */
+
+  .contact-card:nth-child(1)
+  .contact-card-content {
+    grid-area: content;
+
+    margin-top: 0;
+
+    padding-left: 28px;
+
+    border-left:
+      1px solid
+      rgba(23, 108, 255, 0.12);
+  }
+
+  /* Instagram action */
+
+  .contact-card:nth-child(1)
+  .contact-action {
+    grid-area: action;
+
+    margin-top: 0;
+
+    padding:
+      11px
+      16px;
+
+    border-radius: 999px;
+
+    background:
+      rgba(23, 108, 255, 0.07);
+
+    border:
+      1px solid
+      rgba(23, 108, 255, 0.1);
+
+    transition:
+      gap 0.25s ease,
+      background 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .contact-card:nth-child(1)
+  .contact-action:hover {
+    gap: 11px;
+
+    background:
+      rgba(23, 108, 255, 0.1);
+
+    border-color:
+      rgba(23, 108, 255, 0.18);
+  }
+
+}
+
+@media (min-width: 609px) and (max-width: 900px) {
+
+  .contact-card:nth-child(1) {
+    grid-template-columns:
+      auto
+      minmax(0, 1fr)
+      auto;
+
+    column-gap: 20px;
+
+    padding:
+      24px
+      25px;
+  }
+
+  .contact-card:nth-child(1)
+  .contact-card-content {
+    padding-left: 20px;
+  }
+
 }
