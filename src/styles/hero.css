@@ -127,19 +127,28 @@
 }
 
 /* ==================================================
-   BUTTON BREATH — SOFT BLUE GLOW
+   CTA BUTTON — ATTENTION BREATH
 ================================================== */
 
 .btn-breathe {
   position: relative;
 
+  overflow: hidden;
+
+  isolation: isolate;
+
   animation:
-    buttonBreath 1.2s ease-in-out infinite;
+    buttonBreath 1.5s ease-in-out infinite;
 
   will-change:
     transform,
     box-shadow;
 }
+
+
+/* ==================================================
+   BREATH + GLOW
+================================================== */
 
 @keyframes buttonBreath {
 
@@ -148,17 +157,81 @@
     transform: scale(1);
 
     box-shadow:
-      0 4px 10px rgba(23, 108, 255, 0.45),
-      0 0 6px rgba(66, 185, 255, 0.28);
+      0 3px 8px rgba(23, 108, 255, 0.42),
+      0 0 5px rgba(66, 185, 255, 0.30);
   }
 
   50% {
-    transform: scale(1.018);
+    transform: scale(1.025);
 
     box-shadow:
-      0 5px 14px rgba(23, 108, 255, 0.65),
-      0 0 9px rgba(66, 185, 255, 0.45);
+      0 4px 11px rgba(23, 108, 255, 0.68),
+      0 0 9px rgba(66, 185, 255, 0.52);
   }
+
+}
+
+
+/* ==================================================
+   LIGHT SWEEP
+================================================== */
+
+.btn-breathe::after {
+  content: '';
+
+  position: absolute;
+
+  top: -50%;
+  left: -45%;
+
+  width: 28%;
+  height: 200%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.38),
+      transparent
+    );
+
+  transform:
+    rotate(18deg)
+    translateX(-220%);
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  animation:
+    buttonShine 4.5s ease-in-out infinite;
+}
+
+@keyframes buttonShine {
+
+  0%,
+  62% {
+    transform:
+      rotate(18deg)
+      translateX(-220%);
+  }
+
+  82%,
+  100% {
+    transform:
+      rotate(18deg)
+      translateX(650%);
+  }
+
+}
+
+
+/* keep text above shine */
+
+.btn-breathe > * {
+  position: relative;
+
+  z-index: 2;
 }
 
 @media (max-width: 608px) {
