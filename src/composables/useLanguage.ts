@@ -26,8 +26,8 @@ const translations = {
       titleAfter: 'Marketplace.',
       description:
         'Buy and sell DL & BGL through a clean, secure, and reliable marketplace experience.',
-      contact: 'Buy/Sell Here',
-      explore: 'Explore Services',
+      contact: 'BUY/SELL HERE',
+      explore: 'EXPLORE SERVICES',
       fast: 'Fast',
       transactions: 'Transactions',
       trusted: 'Trusted',
@@ -36,13 +36,13 @@ const translations = {
     },
 
     stats: {
-        transactions: 'Successful Transactions',
+        transactions: 'SUCCESSFUL TRANSACTIONS',
 
-        trusted: 'Trusted',
+        trusted: 'TRUSTED',
 
-        support: 'Customer Support',
+        support: 'CUSTOMER SUPPORT',
 
-        instant: 'Instant Process',
+        instant: 'INSTANT PROCESS',
     },
 
     about: {
@@ -297,7 +297,7 @@ const translations = {
       description:
         'Beli dan jual DL & BGL melalui pengalaman marketplace yang aman, mudah, dan terpercaya.',
       explore: 'Lihat Layanan',
-      contact: 'Jual/Beli Disini',
+      contact: 'JUAL/BELI DISINI',
       fast: 'Transaksi',
       transactions: 'Cepat',
       trusted: 'Layanan',
@@ -306,13 +306,13 @@ const translations = {
     },
 
     stats: {
-        transactions: 'Transaksi Berhasil',
+        transactions: 'TRANSAKSI BERHASIL',
 
-        trusted: 'Terpercaya',
+        trusted: 'TERPERCAYA',
 
-        support: 'Customer Support',
+        support: 'CUSTOMER SUPPORT',
 
-        instant: 'Proses Instan',
+        instant: 'PROSES INSTAN',
     },
 
     about: {

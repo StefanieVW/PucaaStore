@@ -232,7 +232,7 @@
 
   color: var(--blue);
 
-  font-size: clamp(9px, 0.75vw, 11px);
+  font-size: clamp(9px, 0.75vw, 12px);
 
   font-weight: 800;
 
