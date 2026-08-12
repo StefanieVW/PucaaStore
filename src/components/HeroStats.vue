@@ -23,7 +23,13 @@ const { t } = useLanguage()
         </div>
 
         <div class="hero-stat-content">
-          <strong>100K+</strong>
+          <strong
+            class="hero-stat-number"
+            data-value="100"
+            data-suffix="K+"
+          >
+            0K+
+          </strong>
 
           <span class="hero-stat-title">
             {{ t.stats.transactions }}
@@ -41,7 +47,13 @@ const { t } = useLanguage()
         </div>
 
         <div class="hero-stat-content">
-          <strong>100%</strong>
+          <strong
+            class="hero-stat-number"
+            data-value="100"
+            data-suffix="%"
+          >
+            0%
+          </strong>
 
           <span class="hero-stat-title">
             {{ t.stats.trusted }}
@@ -59,7 +71,13 @@ const { t } = useLanguage()
         </div>
 
         <div class="hero-stat-content">
-          <strong>24/7</strong>
+          <strong
+            class="hero-stat-number"
+            data-value="24"
+            data-type="support"
+          >
+            0/7
+          </strong>
 
           <span class="hero-stat-title">
             {{ t.stats.support }}
@@ -77,7 +95,13 @@ const { t } = useLanguage()
         </div>
 
         <div class="hero-stat-content">
-          <strong>&lt;3 Min</strong>
+          <strong
+            class="hero-stat-number"
+            data-value="179"
+            data-type="time"
+          >
+            0 Sec
+          </strong>
 
           <span class="hero-stat-title">
             {{ t.stats.instant }}

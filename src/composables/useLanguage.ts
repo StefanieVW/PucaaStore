@@ -296,7 +296,7 @@ const translations = {
       titleAfter: 'Terpercaya.',
       description:
         'Beli dan jual DL & BGL melalui pengalaman marketplace yang aman, mudah, dan terpercaya.',
-      explore: 'Lihat Layanan',
+      explore: 'LIHAT LAYANAN',
       contact: 'JUAL/BELI DISINI',
       fast: 'Transaksi',
       transactions: 'Cepat',

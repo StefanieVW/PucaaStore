@@ -62,6 +62,141 @@ export function initHomeAnimations() {
     }
   )
 
+/* ==================================================
+   HERO STATS COUNTER
+================================================== */
+
+const heroStatNumbers =
+  gsap.utils.toArray<HTMLElement>('.hero-stat-number')
+
+heroStatNumbers.forEach((element) => {
+
+  const target =
+    Number(element.dataset.value) || 0
+
+  const suffix =
+    element.dataset.suffix || ''
+
+  const type =
+    element.dataset.type || 'normal'
+
+  const counter = {
+    value: 0,
+  }
+
+  gsap.to(counter, {
+
+    value: target,
+
+    /* SAME DURATION FOR ALL STATS */
+    duration: 1.8,
+
+    ease: 'power2.out',
+
+    scrollTrigger: {
+      trigger: '.hero-stats-grid',
+      start: 'top 85%',
+      once: true,
+    },
+
+    onUpdate: () => {
+
+      const value =
+        Math.round(counter.value)
+
+      /* =========================
+         NORMAL
+         100K+ / 100%
+      ========================= */
+
+      if (type === 'normal') {
+
+        element.textContent =
+          `${value}${suffix}`
+
+        return
+      }
+
+
+      /* =========================
+         SUPPORT
+         0/7 → 24/7
+      ========================= */
+
+      if (type === 'support') {
+
+        element.textContent =
+          `${value}/7`
+
+        return
+      }
+
+
+      /* =========================
+         RESPONSE TIME
+      ========================= */
+
+      if (type === 'time') {
+
+        if (value < 60) {
+
+          element.textContent =
+            `${value} Sec`
+
+        } else {
+
+          const minutes =
+            Math.floor(value / 60)
+
+          const seconds =
+            value % 60
+
+          if (seconds === 0) {
+
+            element.textContent =
+              `${minutes} Min`
+
+          } else {
+
+            element.textContent =
+              `${minutes}m ${seconds}s`
+
+          }
+
+        }
+
+      }
+
+    },
+
+    onComplete: () => {
+
+      if (type === 'normal') {
+
+        element.textContent =
+          `${target}${suffix}`
+
+      }
+
+      else if (type === 'support') {
+
+        element.textContent =
+          '24/7'
+
+      }
+
+      else if (type === 'time') {
+
+        element.textContent =
+          '<3 Min'
+
+      }
+
+    },
+
+  })
+
+})
 
   /* ==================================================
      SERVICES
