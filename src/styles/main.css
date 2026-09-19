@@ -16,7 +16,7 @@
 @import "./languages.css";
 @import "./footer.css";
 @import "./logo.css";
-
+@import "./reviews.css";
 
 :root {
   --white: #ffffff;

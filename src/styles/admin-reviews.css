@@ -1,0 +1,2217 @@
+/* ==================================================
+   BGL STORE - ADMIN REVIEWS
+================================================== */
+
+.admin-dashboard {
+  position: relative;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  color: #08224f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background:
+    #f6f9fd;
+}
+
+
+/* ==================================================
+   BACKGROUND
+================================================== */
+
+.admin-dashboard-background {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.admin-dashboard-glow {
+  position: absolute;
+
+  border-radius: 50%;
+}
+
+.admin-dashboard-glow.glow-one {
+  top: -330px;
+  right: -250px;
+
+  width: 720px;
+  height: 720px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(23, 108, 255, 0.09),
+      transparent 68%
+    );
+}
+
+.admin-dashboard-glow.glow-two {
+  bottom: -420px;
+  left: -320px;
+
+  width: 800px;
+  height: 800px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(66, 185, 255, 0.07),
+      transparent 68%
+    );
+}
+
+.admin-dashboard-grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.5;
+
+  background-image:
+    linear-gradient(
+      rgba(23, 108, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(23, 108, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    45px 45px;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.admin-header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 50;
+
+  border-bottom:
+    1px solid
+    rgba(23, 108, 255, 0.09);
+
+  background:
+    rgba(255, 255, 255, 0.88);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+}
+
+.admin-header-inner {
+  display: flex;
+
+  width:
+    min(1180px, calc(100% - 48px));
+
+  min-height: 76px;
+
+  margin: 0 auto;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ==================================================
+   HEADER BRAND
+================================================== */
+
+.admin-header-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.admin-header-logo {
+  display: block;
+
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+.admin-header-brand-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.admin-header-brand-text strong {
+  color: #08224f;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.admin-header-brand-text span {
+  color: #8596ae;
+
+  font-size: 8px;
+  font-weight: 750;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* ==================================================
+   HEADER USER
+================================================== */
+
+.admin-header-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.admin-user-info {
+  display: flex;
+
+  margin-right: 2px;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 2px;
+}
+
+.admin-user-info span {
+  color: #91a0b5;
+
+  font-size: 9px;
+}
+
+.admin-user-info strong {
+  color: #17365f;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-user-avatar {
+  display: flex;
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  background:
+    linear-gradient(
+      135deg,
+      #176cff,
+      #42b9ff
+    );
+
+  box-shadow:
+    0 8px 22px
+    rgba(23, 108, 255, 0.2);
+}
+
+
+/* ==================================================
+   LOGOUT
+================================================== */
+
+.admin-logout-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-left: 4px;
+
+  padding:
+    10px 14px;
+
+  border:
+    1px solid
+    rgba(23, 108, 255, 0.1);
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  color: #617793;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  background:
+    rgba(23, 108, 255, 0.035);
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.admin-logout-button svg {
+  width: 15px;
+  height: 15px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.admin-logout-button:hover {
+  color: #176cff;
+
+  border-color:
+    rgba(23, 108, 255, 0.2);
+
+  background:
+    rgba(23, 108, 255, 0.07);
+}
+
+
+/* ==================================================
+   MOBILE MENU
+================================================== */
+
+.admin-mobile-menu-button,
+.admin-mobile-menu {
+  display: none;
+}
+
+
+/* ==================================================
+   MAIN
+================================================== */
+
+.admin-main {
+  position: relative;
+
+  z-index: 2;
+
+  padding:
+    70px 0 90px;
+}
+
+.admin-content {
+  width:
+    min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+
+/* ==================================================
+   PAGE HEADING
+================================================== */
+
+.admin-page-heading {
+  display: flex;
+
+  margin-bottom: 40px;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.admin-page-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 11px;
+
+  color: #176cff;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.admin-page-heading h1 {
+  margin: 0;
+
+  color: #08224f;
+
+  font-size:
+    clamp(34px, 4vw, 48px);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
+}
+
+.admin-page-heading p {
+  max-width: 520px;
+
+  margin: 13px 0 0;
+
+  color: #6f829e;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* ==================================================
+   REFRESH
+================================================== */
+
+.admin-refresh-button {
+  display: inline-flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding:
+    11px 15px;
+
+  border:
+    1px solid
+    rgba(23, 108, 255, 0.11);
+
+  border-radius: 11px;
+
+  cursor: pointer;
+
+  color: #58708f;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 7px 20px
+    rgba(18, 74, 145, 0.04);
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.admin-refresh-button svg {
+  width: 15px;
+  height: 15px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.admin-refresh-button:hover:not(:disabled) {
+  transform:
+    translateY(-2px);
+
+  color: #176cff;
+
+  box-shadow:
+    0 10px 25px
+    rgba(23, 108, 255, 0.08);
+}
+
+.admin-refresh-button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.55;
+}
+
+
+/* ==================================================
+   STATISTICS
+================================================== */
+
+.admin-stats {
+  display: grid;
+
+  margin-bottom: 28px;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.admin-stat-card {
+  display: flex;
+
+  min-width: 0;
+
+  padding: 23px;
+
+  box-sizing: border-box;
+
+  align-items: center;
+
+  gap: 17px;
+
+  border:
+    1px solid
+    rgba(23, 108, 255, 0.085);
+
+  border-radius: 19px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  background:
+    rgba(255, 255, 255, 0.86);
+
+  box-shadow:
+    0 12px 35px
+    rgba(18, 74, 145, 0.055);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.admin-stat-card:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(23, 108, 255, 0.17);
+
+  box-shadow:
+    0 17px 42px
+    rgba(23, 108, 255, 0.09);
+}
+
+.admin-stat-card.active {
+  border-color:
+    rgba(23, 108, 255, 0.24);
+
+  box-shadow:
+    0 17px 45px
+    rgba(23, 108, 255, 0.1);
+}
+
+.admin-stat-icon {
+  display: flex;
+
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+}
+
+.admin-stat-icon svg {
+  width: 22px;
+  height: 22px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.admin-stat-icon.pending {
+  color: #d88c12;
+
+  background:
+    rgba(255, 181, 46, 0.11);
+}
+
+.admin-stat-icon.approved {
+  color: #16976a;
+
+  background:
+    rgba(22, 151, 106, 0.09);
+}
+
+.admin-stat-icon.rejected {
+  color: #cf5261;
+
+  background:
+    rgba(207, 82, 97, 0.08);
+}
+
+.admin-stat-content {
+  display: grid;
+
+  min-width: 0;
+
+  grid-template-columns:
+    1fr auto;
+
+  align-items: center;
+
+  column-gap: 10px;
+}
+
+.admin-stat-content span {
+  color: #607591;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.admin-stat-content strong {
+  grid-row:
+    1 / span 2;
+
+  grid-column: 2;
+
+  color: #08224f;
+
+  font-size: 30px;
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+.admin-stat-content small {
+  margin-top: 5px;
+
+  color: #9aa8bb;
+
+  font-size: 9px;
+}
+
+
+/* ==================================================
+   REVIEW PANEL
+================================================== */
+
+.admin-review-panel {
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(23, 108, 255, 0.085);
+
+  border-radius: 22px;
+
+  background:
+    rgba(255, 255, 255, 0.86);
+
+  box-shadow:
+    0 18px 55px
+    rgba(18, 74, 145, 0.065);
+}
+
+.admin-review-panel-header {
+  display: flex;
+
+  padding:
+    27px 30px 24px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.admin-review-panel-header h2 {
+  margin: 0;
+
+  color: #102d55;
+
+  font-size: 18px;
+
+  letter-spacing: -0.025em;
+}
+
+.admin-review-panel-header p {
+  margin: 6px 0 0;
+
+  color: #8797ad;
+
+  font-size: 10px;
+}
+
+.admin-total-reviews {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding:
+    8px 12px;
+
+  border-radius: 9px;
+
+  color: #8192aa;
+
+  font-size: 9px;
+
+  background:
+    rgba(23, 108, 255, 0.045);
+}
+
+.admin-total-reviews strong {
+  color: #176cff;
+
+  font-size: 12px;
+}
+
+
+/* ==================================================
+   TABS
+================================================== */
+
+.admin-review-tabs {
+  display: flex;
+
+  padding:
+    0 30px;
+
+  gap: 5px;
+
+  border-bottom:
+    1px solid
+    rgba(23, 108, 255, 0.075);
+}
+
+.admin-review-tabs button {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    13px 15px;
+
+  border: 0;
+
+  cursor: pointer;
+
+  color: #8495ab;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  background: transparent;
+
+  transition:
+    color 0.25s ease;
+}
+
+.admin-review-tabs button::after {
+  content: "";
+
+  position: absolute;
+
+  right: 12px;
+  bottom: -1px;
+  left: 12px;
+
+  height: 2px;
+
+  border-radius:
+    2px 2px 0 0;
+
+  opacity: 0;
+
+  background: #176cff;
+
+  transform:
+    scaleX(0.4);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.admin-review-tabs button.active {
+  color: #176cff;
+}
+
+.admin-review-tabs button.active::after {
+  opacity: 1;
+
+  transform: scaleX(1);
+}
+
+.admin-review-tabs strong {
+  display: flex;
+
+  min-width: 20px;
+  height: 20px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    0 5px;
+
+  box-sizing: border-box;
+
+  border-radius: 6px;
+
+  color: #788ca8;
+
+  font-size: 8px;
+
+  background:
+    rgba(23, 108, 255, 0.055);
+}
+
+.admin-review-tabs button.active strong {
+  color: #176cff;
+
+  background:
+    rgba(23, 108, 255, 0.09);
+}
+
+
+/* ==================================================
+   REVIEW LIST
+================================================== */
+
+.admin-review-list {
+  display: flex;
+
+  padding: 25px 30px 30px;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.admin-review-card {
+  padding: 23px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(23, 108, 255, 0.075);
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 251, 255, 0.8)
+    );
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.admin-review-card:hover {
+  border-color:
+    rgba(23, 108, 255, 0.15);
+
+  box-shadow:
+    0 13px 35px
+    rgba(23, 108, 255, 0.055);
+}
+
+
+/* ==================================================
+   REVIEW TOP
+================================================== */
+
+.admin-review-top {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.admin-review-customer {
+  display: flex;
+
+  min-width: 0;
+
+  align-items: center;
+
+  gap: 11px;
+}
+
+.admin-review-avatar {
+  display: flex;
+
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  background:
+    linear-gradient(
+      135deg,
+      #176cff,
+      #42b9ff
+    );
+}
+
+.admin-review-customer-info {
+  display: flex;
+
+  min-width: 0;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.admin-review-customer-info strong {
+  overflow: hidden;
+
+  color: #17365f;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.admin-review-customer-info span {
+  color: #9aa7b9;
+
+  font-size: 9px;
+}
+
+
+/* ==================================================
+   STATUS BADGE
+================================================== */
+
+.admin-status-badge {
+  display: inline-flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding:
+    6px 9px;
+
+  border-radius: 999px;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+
+  text-transform: uppercase;
+}
+
+.admin-status-badge i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+}
+
+.admin-status-badge.pending {
+  color: #bd7910;
+
+  background:
+    rgba(255, 181, 46, 0.1);
+}
+
+.admin-status-badge.pending i {
+  background: #e6a029;
+}
+
+.admin-status-badge.approved {
+  color: #12845c;
+
+  background:
+    rgba(22, 151, 106, 0.085);
+}
+
+.admin-status-badge.approved i {
+  background: #1a9c6d;
+}
+
+.admin-status-badge.rejected {
+  color: #be4857;
+
+  background:
+    rgba(207, 82, 97, 0.075);
+}
+
+.admin-status-badge.rejected i {
+  background: #cf5261;
+}
+
+
+/* ==================================================
+   REVIEW STARS
+================================================== */
+
+.admin-review-stars {
+  display: flex;
+
+  margin-top: 17px;
+
+  align-items: center;
+
+  gap: 3px;
+}
+
+.admin-review-stars span {
+  color: #dfe6ef;
+
+  font-size: 14px;
+}
+
+.admin-review-stars span.active {
+  color: #ffb82e;
+}
+
+.admin-review-stars small {
+  margin-left: 6px;
+
+  color: #9aa8ba;
+
+  font-size: 8px;
+  font-weight: 650;
+}
+
+
+/* ==================================================
+   COMMENT
+================================================== */
+
+.admin-review-comment {
+  max-width: 850px;
+
+  margin:
+    13px 0 19px;
+
+  color: #425b7b;
+
+  font-size: 12px;
+  line-height: 1.75;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   REVIEW FOOTER
+================================================== */
+
+.admin-review-footer {
+  display: flex;
+
+  padding-top: 16px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top:
+    1px solid
+    rgba(23, 108, 255, 0.065);
+}
+
+.admin-review-date {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #94a3b7;
+
+  font-size: 9px;
+}
+
+.admin-review-date svg {
+  width: 13px;
+  height: 13px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.6;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ==================================================
+   ACTIONS
+================================================== */
+
+.admin-review-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.admin-reject-button,
+.admin-approve-button {
+  display: inline-flex;
+
+  min-height: 35px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    9px 14px;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.admin-reject-button {
+  border:
+    1px solid
+    rgba(207, 82, 97, 0.13);
+
+  color: #bd4c59;
+
+  background:
+    rgba(207, 82, 97, 0.045);
+}
+
+.admin-reject-button:hover:not(:disabled) {
+  background:
+    rgba(207, 82, 97, 0.085);
+}
+
+.admin-approve-button {
+  border:
+    1px solid #176cff;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #176cff,
+      #398cff
+    );
+
+  box-shadow:
+    0 8px 20px
+    rgba(23, 108, 255, 0.17);
+}
+
+.admin-approve-button:hover:not(:disabled) {
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 11px 25px
+    rgba(23, 108, 255, 0.23);
+}
+
+.admin-reject-button:disabled,
+.admin-approve-button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.55;
+}
+
+
+/* ==================================================
+   ACTION LOADING
+================================================== */
+
+.admin-action-loading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.admin-action-loading i {
+  width: 10px;
+  height: 10px;
+
+  border:
+    1.5px solid
+    rgba(255, 255, 255, 0.35);
+
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation:
+    admin-action-spin
+    0.65s linear infinite;
+}
+
+@keyframes admin-action-spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* ==================================================
+   REVIEWED INFO
+================================================== */
+
+.admin-reviewed-info {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.admin-reviewed-info span {
+  color: #657b97;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.admin-reviewed-info small {
+  color: #a1adbd;
+
+  font-size: 8px;
+}
+
+
+/* ==================================================
+   EMPTY STATE
+================================================== */
+
+.admin-empty-state {
+  padding:
+    75px 25px 80px;
+
+  text-align: center;
+}
+
+.admin-empty-icon {
+  display: flex;
+
+  width: 56px;
+  height: 56px;
+
+  margin:
+    0 auto 18px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  color: #176cff;
+
+  background:
+    rgba(23, 108, 255, 0.065);
+}
+
+.admin-empty-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 1.5;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.admin-empty-state h3 {
+  margin: 0;
+
+  color: #17365f;
+
+  font-size: 15px;
+}
+
+.admin-empty-state p {
+  max-width: 360px;
+
+  margin:
+    8px auto 0;
+
+  color: #8999ae;
+
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+
+/* ==================================================
+   PAGE LOADING
+================================================== */
+
+.admin-dashboard-loading {
+  display: flex;
+
+  min-height: 350px;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #8798ad;
+}
+
+.admin-dashboard-spinner {
+  width: 30px;
+  height: 30px;
+
+  margin-bottom: 16px;
+
+  border:
+    3px solid
+    rgba(23, 108, 255, 0.1);
+
+  border-top-color:
+    #176cff;
+
+  border-radius: 50%;
+
+  animation:
+    admin-dashboard-spin
+    0.75s linear infinite;
+}
+
+@keyframes admin-dashboard-spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+.admin-dashboard-loading strong {
+  color: #385473;
+
+  font-size: 12px;
+}
+
+.admin-dashboard-loading span {
+  margin-top: 5px;
+
+  font-size: 9px;
+}
+
+
+/* ==================================================
+   PAGE ERROR
+================================================== */
+
+.admin-page-error {
+  display: flex;
+
+  padding: 18px;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border:
+    1px solid
+    rgba(207, 82, 97, 0.12);
+
+  border-radius: 14px;
+
+  background:
+    rgba(207, 82, 97, 0.04);
+}
+
+.admin-page-error > span {
+  display: flex;
+
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  background: #cf5261;
+}
+
+.admin-page-error div {
+  flex: 1;
+}
+
+.admin-page-error strong {
+  color: #9e3e4a;
+
+  font-size: 11px;
+}
+
+.admin-page-error p {
+  margin: 3px 0 0;
+
+  color: #ad6670;
+
+  font-size: 9px;
+}
+
+.admin-page-error button {
+  padding:
+    8px 12px;
+
+  border:
+    1px solid
+    rgba(207, 82, 97, 0.15);
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  color: #ad4754;
+
+  font-family: inherit;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  background: white;
+}
+
+
+/* ==================================================
+   CONFIRM OVERLAY
+================================================== */
+
+.admin-confirm-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    rgba(5, 20, 45, 0.42);
+
+  backdrop-filter:
+    blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
+}
+
+
+/* ==================================================
+   CONFIRM MODAL
+================================================== */
+
+.admin-confirm-modal {
+  width: min(430px, 100%);
+
+  padding: 32px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    rgba(23, 108, 255, 0.1);
+
+  border-radius: 22px;
+
+  background: white;
+
+  box-shadow:
+    0 35px 100px
+    rgba(5, 32, 70, 0.25);
+}
+
+.admin-confirm-icon {
+  display: flex;
+
+  width: 46px;
+  height: 46px;
+
+  margin-bottom: 19px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  color: #c64d5b;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  background:
+    rgba(207, 82, 97, 0.08);
+}
+
+.admin-confirm-modal h3 {
+  margin: 0;
+
+  color: #17365f;
+
+  font-size: 21px;
+
+  letter-spacing: -0.03em;
+}
+
+.admin-confirm-modal > p {
+  margin:
+    10px 0 20px;
+
+  color: #71839c;
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.admin-confirm-modal > p strong {
+  color: #385474;
+}
+
+.admin-confirm-preview {
+  padding: 15px;
+
+  border:
+    1px solid
+    rgba(23, 108, 255, 0.07);
+
+  border-radius: 12px;
+
+  background: #f8fbff;
+}
+
+.admin-confirm-preview div {
+  display: flex;
+
+  gap: 2px;
+}
+
+.admin-confirm-preview span {
+  color: #dce5ef;
+
+  font-size: 12px;
+}
+
+.admin-confirm-preview span.active {
+  color: #ffb82e;
+}
+
+.admin-confirm-preview p {
+  display: -webkit-box;
+
+  margin:
+    8px 0 0;
+
+  overflow: hidden;
+
+  color: #607591;
+
+  font-size: 10px;
+  line-height: 1.6;
+
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+
+/* ==================================================
+   CONFIRM ACTIONS
+================================================== */
+
+.admin-confirm-actions {
+  display: grid;
+
+  margin-top: 22px;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 9px;
+}
+
+.admin-confirm-actions button {
+  min-height: 42px;
+
+  padding:
+    10px 15px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.admin-confirm-cancel {
+  border:
+    1px solid
+    rgba(23, 108, 255, 0.1);
+
+  color: #617793;
+
+  background: white;
+}
+
+.admin-confirm-reject {
+  border:
+    1px solid #cf5261;
+
+  color: white;
+
+  background:
+    #cf5261;
+}
+
+.admin-confirm-actions button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.55;
+}
+
+
+/* ==================================================
+   CONFIRM TRANSITION
+================================================== */
+
+.admin-confirm-enter-active,
+.admin-confirm-leave-active {
+  transition:
+    opacity 0.25s ease;
+}
+
+.admin-confirm-enter-active
+.admin-confirm-modal,
+.admin-confirm-leave-active
+.admin-confirm-modal {
+  transition:
+    transform 0.3s
+    cubic-bezier(.16, 1, .3, 1),
+    opacity 0.25s ease;
+}
+
+.admin-confirm-enter-from,
+.admin-confirm-leave-to {
+  opacity: 0;
+}
+
+.admin-confirm-enter-from
+.admin-confirm-modal {
+  opacity: 0;
+
+  transform:
+    translateY(15px)
+    scale(0.97);
+}
+
+
+/* ==================================================
+   TOAST
+================================================== */
+
+.admin-toast {
+  position: fixed;
+
+  z-index: 100000;
+
+  right: 24px;
+  bottom: 24px;
+
+  display: flex;
+
+  min-width: 260px;
+
+  padding:
+    13px 16px;
+
+  box-sizing: border-box;
+
+  align-items: center;
+
+  gap: 9px;
+
+  border:
+    1px solid
+    rgba(23, 108, 255, 0.09);
+
+  border-radius: 12px;
+
+  color: #405a78;
+
+  font-family:
+    Inter,
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 650;
+
+  background:
+    rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 18px 50px
+    rgba(10, 47, 95, 0.16);
+}
+
+.admin-toast-icon {
+  display: flex;
+
+  width: 23px;
+  height: 23px;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.admin-toast.success
+.admin-toast-icon {
+  background: #19996d;
+}
+
+.admin-toast.error
+.admin-toast-icon {
+  background: #cf5261;
+}
+
+.admin-toast-enter-active,
+.admin-toast-leave-active {
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s
+    cubic-bezier(.16, 1, .3, 1);
+}
+
+.admin-toast-enter-from,
+.admin-toast-leave-to {
+  opacity: 0;
+
+  transform:
+    translateY(10px);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 850px) {
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-stat-card {
+    padding:
+      18px 20px;
+  }
+
+  .admin-stat-content {
+    width: 100%;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 650px) {
+
+  .admin-header-inner {
+    width:
+      calc(100% - 32px);
+
+    min-height: 68px;
+  }
+
+  .admin-header-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .admin-header-user {
+    display: none;
+  }
+
+  .admin-mobile-menu-button {
+    display: flex;
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    border:
+      1px solid
+      rgba(23, 108, 255, 0.09);
+
+    border-radius: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    cursor: pointer;
+
+    background:
+      rgba(23, 108, 255, 0.035);
+  }
+
+  .admin-mobile-menu-button span {
+    width: 15px;
+    height: 1.5px;
+
+    border-radius: 2px;
+
+    background: #58708f;
+  }
+
+  .admin-mobile-menu {
+    display: flex;
+
+    padding:
+      13px 16px;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-top:
+      1px solid
+      rgba(23, 108, 255, 0.07);
+
+    background:
+      rgba(255, 255, 255, 0.97);
+  }
+
+  .admin-mobile-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+  }
+
+  .admin-mobile-user
+  .admin-user-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .admin-mobile-user > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+  }
+
+  .admin-mobile-user span {
+    color: #94a3b7;
+
+    font-size: 8px;
+  }
+
+  .admin-mobile-user strong {
+    color: #385473;
+
+    font-size: 10px;
+  }
+
+  .admin-mobile-menu > button {
+    padding:
+      8px 12px;
+
+    border:
+      1px solid
+      rgba(207, 82, 97, 0.11);
+
+    border-radius: 8px;
+
+    color: #be4d5a;
+
+    font-family: inherit;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    background:
+      rgba(207, 82, 97, 0.045);
+  }
+
+
+  /* MAIN */
+
+  .admin-main {
+    padding:
+      48px 0 70px;
+  }
+
+  .admin-content {
+    width:
+      calc(100% - 32px);
+  }
+
+
+  /* HEADING */
+
+  .admin-page-heading {
+    margin-bottom: 31px;
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .admin-page-heading h1 {
+    font-size:
+      clamp(31px, 9vw, 40px);
+  }
+
+  .admin-page-heading p {
+    font-size: 11px;
+  }
+
+  .admin-refresh-button {
+    padding:
+      9px 13px;
+  }
+
+
+  /* STATS */
+
+  .admin-stats {
+    gap: 10px;
+  }
+
+  .admin-stat-icon {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 13px;
+  }
+
+  .admin-stat-content strong {
+    font-size: 27px;
+  }
+
+
+  /* PANEL */
+
+  .admin-review-panel {
+    border-radius: 18px;
+  }
+
+  .admin-review-panel-header {
+    padding:
+      22px 19px 18px;
+  }
+
+  .admin-review-panel-header h2 {
+    font-size: 16px;
+  }
+
+  .admin-total-reviews {
+    padding:
+      7px 9px;
+  }
+
+
+  /* TABS */
+
+  .admin-review-tabs {
+    padding:
+      0 10px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .admin-review-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .admin-review-tabs button {
+    flex-shrink: 0;
+
+    padding:
+      12px 10px;
+  }
+
+
+  /* LIST */
+
+  .admin-review-list {
+    padding:
+      17px;
+
+    gap: 12px;
+  }
+
+  .admin-review-card {
+    padding: 18px;
+
+    border-radius: 14px;
+  }
+
+  .admin-review-comment {
+    font-size: 11px;
+  }
+
+
+  /* FOOTER */
+
+  .admin-review-footer {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 13px;
+  }
+
+  .admin-review-actions {
+    display: grid;
+
+    width: 100%;
+
+    grid-template-columns:
+      1fr 1.35fr;
+  }
+
+  .admin-reject-button,
+  .admin-approve-button {
+    width: 100%;
+
+    min-height: 40px;
+  }
+
+  .admin-reviewed-info {
+    justify-content:
+      space-between;
+  }
+
+
+  /* TOAST */
+
+  .admin-toast {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+
+    min-width: 0;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 380px) {
+
+  .admin-header-inner,
+  .admin-content {
+    width:
+      calc(100% - 24px);
+  }
+
+  .admin-header-brand-text strong {
+    font-size: 10px;
+  }
+
+  .admin-header-brand-text span {
+    font-size: 7px;
+  }
+
+  .admin-review-panel-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admin-review-top {
+    gap: 10px;
+  }
+
+  .admin-status-badge {
+    padding:
+      5px 7px;
+
+    font-size: 7px;
+  }
+
+  .admin-review-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-confirm-modal {
+    padding: 25px 21px;
+  }
+
+  .admin-confirm-actions {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .admin-dashboard-spinner,
+  .admin-action-loading i {
+    animation: none;
+  }
+
+  .admin-stat-card,
+  .admin-review-card,
+  .admin-refresh-button,
+  .admin-approve-button {
+    transition: none;
+  }
+
+}

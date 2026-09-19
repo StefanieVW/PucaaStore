@@ -17,6 +17,7 @@ import ContactSection from '../components/ContactSection.vue'
 import WhatsAppChannel from '../components/WhatsappChannel.vue'
 import FAQ from '../components/FAQ.vue'
 import Footer from '../components/Footer.vue'
+import CustomerReviews from '../components/CustomerReviews.vue'
 
 import { useLanguage } from '../composables/useLanguage'
 
@@ -227,6 +228,10 @@ onUnmounted(() => {
       <!-- ================= PAYMENT METHODS ================= -->
 
       <PaymentMethods />
+
+      <!-- ================= CUSTOMER REVIEWS ================= -->
+
+      <CustomerReviews />
 
       <!-- ================= CONTACT ================= -->
 

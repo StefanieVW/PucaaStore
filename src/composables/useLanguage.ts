@@ -201,6 +201,65 @@ const translations = {
         'We support a wide range of local and international payment methods.',
     },
 
+    reviews: {
+      eyebrow: 'CUSTOMER REVIEWS',
+
+      titleBefore: 'Trusted by our',
+      titleHighlight: 'community.',
+
+      description:
+        'Real experiences shared by customers who have completed transactions with us.',
+
+      verified: 'Verified',
+
+      empty:
+        'Be the first to share your experience with us.',
+
+      question:
+        'Already completed a transaction with us?',
+
+      button: 'Leave a Review',
+
+      form: {
+        eyebrow: 'SHARE YOUR EXPERIENCE',
+
+        title: 'Leave a Review',
+
+        description:
+          'Tell us about your experience with our service.',
+
+        name: 'Your Name',
+
+        namePlaceholder:
+          'Enter your name',
+
+        rating: 'Your Rating',
+
+        review: 'Your Review',
+
+        reviewPlaceholder:
+          'Tell us about your experience...',
+
+        submit: 'Submit Review',
+
+        submitting: 'Submitting...',
+
+        moderation:
+          'Your review will be published after approval by our admin.',
+
+        error:
+          'Something went wrong. Please try again.',
+
+        successTitle:
+          'Thank you!',
+
+        successDescription:
+          'Your review has been submitted and is waiting for admin approval.',
+
+        done: 'Done',
+      },
+    },
+
     contact: {
       eyebrow: 'CONTACT',
       title: 'Get in touch.',
@@ -469,6 +528,65 @@ const translations = {
       title: 'Pilihan pembayaran yang fleksibel.',
       description:
         'Kami mendukung berbagai metode pembayaran lokal maupun internasional.',
+    },
+
+    reviews: {
+      eyebrow: 'ULASAN PELANGGAN',
+
+      titleBefore: 'Dipercaya oleh',
+      titleHighlight: 'komunitas kami.',
+
+      description:
+        'Pengalaman nyata yang dibagikan oleh pelanggan setelah bertransaksi bersama kami.',
+
+      verified: 'Terverifikasi',
+
+      empty:
+        'Jadilah yang pertama membagikan pengalaman bersama kami.',
+
+      question:
+        'Sudah pernah bertransaksi bersama kami?',
+
+      button: 'Tulis Ulasan',
+
+      form: {
+        eyebrow: 'BAGIKAN PENGALAMANMU',
+
+        title: 'Tulis Ulasan',
+
+        description:
+          'Ceritakan pengalamanmu menggunakan layanan kami.',
+
+        name: 'Nama',
+
+        namePlaceholder:
+          'Masukkan nama kamu',
+
+        rating: 'Rating',
+
+        review: 'Ulasan',
+
+        reviewPlaceholder:
+          'Ceritakan pengalaman kamu...',
+
+        submit: 'Kirim Ulasan',
+
+        submitting: 'Mengirim...',
+
+        moderation:
+          'Ulasan kamu akan ditampilkan setelah disetujui oleh admin kami.',
+
+        error:
+          'Terjadi kesalahan. Silakan coba lagi.',
+
+        successTitle:
+          'Terima kasih!',
+
+        successDescription:
+          'Ulasan kamu berhasil dikirim dan sedang menunggu persetujuan admin.',
+
+        done: 'Selesai',
+      },
     },
 
     contact: {
